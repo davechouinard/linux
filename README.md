@@ -1,7 +1,7 @@
 # ubuntu-xenial xfce desktop setup
 
 ```
-sudo apt-get remove libreoffice* vlc firefox thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
+sudo apt-get remove libreoffice-common vlc firefox thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
 sudo apt-get clean
 sudo apt-get autoremove
 sudo apt-get update
