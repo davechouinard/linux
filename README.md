@@ -14,4 +14,6 @@ sudo add-apt-repository "deb https://apt.dockerproject.org/repo/ ubuntu-xenial m
 sudo apt-get update
 sudo apt-get -y install docker-engine
 echo "add Clipman to 'Session and Startup' Application Autostart tab settings"
+echo "logout/login"
+echo "click clipman properties and choose 'Sync selections'"
 ```
