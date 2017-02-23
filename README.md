@@ -1,11 +1,11 @@
 # ubuntu-xenial xfce desktop setup
 
 ```
-sudo apt-get remove libreoffice-common vlc firefox thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
+sudo apt-get -y remove libreoffice-common vlc firefox thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
 sudo apt-get clean
 sudo apt-get autoremove
 sudo apt-get update
-sudo apt-get install xfonts-terminus xfce4-clipman git
+sudo apt-get -y install xfonts-terminus xfce4-clipman git
 echo 'MiscHighlightUrls=FALSE' >> ~/.config/xfce4/terminal/terminalrc
 sudo apt-get install -y --no-install-recommends     apt-transport-https     ca-certificates     curl     software-properties-common
 curl -fsSL https://apt.dockerproject.org/gpg | sudo apt-key add -
