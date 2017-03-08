@@ -5,7 +5,8 @@ sudo apt-get -y remove libreoffice-common vlc firefox thunderbird gimp* pidgin* 
 sudo apt-get clean
 sudo apt-get autoremove
 sudo apt-get update
-sudo apt-get -y install xfonts-terminus xfce4-clipman git python-pip python-dev build-essential
+sudo apt-get -y install xfonts-terminus fonts-inconsolata xfce4-clipman git python-pip python-dev build-essential
+sudo fc-cache -fv
 sudo pip install --upgrade pip 
 sudo pip install --upgrade virtualenv 
 echo 'MiscHighlightUrls=FALSE' >> ~/.config/xfce4/terminal/terminalrc
