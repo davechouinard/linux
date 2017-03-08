@@ -1,0 +1,21 @@
+[user]
+	email = root@localhost
+	name = Dave
+[alias]
+  a = add --all
+  #############
+  c = commit
+  ca = commit -a
+  cm = commit -m
+  #############
+  d = diff
+  #############
+  ps = push
+  #############
+  pl = pull
+  #############
+  s = status
+  #############
+[push]
+	default = simple
+
