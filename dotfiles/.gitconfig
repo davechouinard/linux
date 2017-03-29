@@ -16,6 +16,7 @@
   #############
   s = status
   #############
+  url = remote show origin
 [push]
 	default = simple
 
