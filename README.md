@@ -8,6 +8,7 @@ sudo apt-get -y autoremove
 sudo apt-get update
 sudo apt-get -y install xfonts-terminus fonts-inconsolata xfce4-clipman git
 sudo fc-cache -fv
+mkdir -p ~/.config/xfce4/terminal
 echo 'MiscHighlightUrls=FALSE' >> ~/.config/xfce4/terminal/terminalrc
 xfce4-clipman &
 # Add Clipman to 'Session and Startup' Application Autostart tab settings
