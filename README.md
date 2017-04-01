@@ -1,6 +1,7 @@
 # ubuntu-xenial xfce VirtualBox desktop setup
 
 ```
+sudo vi /etc/gai.conf # line 54 uncomment: precedence ::ffff:0:0/96  100
 sudo apt-get -y remove libreoffice-common vlc firefox thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
 sudo apt-get clean
 sudo apt-get -y autoremove
