@@ -3,7 +3,7 @@
 ```
 sudo apt-get -y remove libreoffice-common vlc firefox thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
 sudo apt-get clean
-sudo apt-get autoremove
+sudo apt-get -y autoremove
 sudo apt-get update
 sudo apt-get -y install xfonts-terminus fonts-inconsolata xfce4-clipman git
 sudo fc-cache -fv
