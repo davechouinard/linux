@@ -17,8 +17,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 "
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'joshdick/onedark.vim'
+Plugin 'flazz/vim-colorschemes'
 Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'pearofducks/ansible-vim'
 Plugin 'scrooloose/nerdtree'
