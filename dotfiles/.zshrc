@@ -8,6 +8,7 @@ HISTSIZE=4096
 SAVEHIST=4096
 
 source "$HOME/.local.environment"
+alias history='history 0'
 
 zstyle ':completion:*' menu select
 
