@@ -1,6 +1,6 @@
 [user]
-	email = root@localhost
-	name = Dave
+  email = root@localhost
+  name = Dave
 [alias]
   a = add --all
   #############
@@ -20,5 +20,4 @@
   #############
   url = remote show origin
 [push]
-	default = simple
-
+  default = simple
