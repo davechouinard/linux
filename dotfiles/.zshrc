@@ -8,6 +8,7 @@ HISTSIZE=4096
 SAVEHIST=4096
 
 source "$HOME/.local.environment"
+source /usr/local/bin/aws_zsh_completer.sh
 alias history='history 0'
 
 zstyle ':completion:*' menu select
