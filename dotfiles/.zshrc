@@ -2,6 +2,9 @@ autoload -Uz compinit promptinit
 compinit
 promptinit
 
+# Fix backward search inside tmux
+bindkey '^R' history-incremental-search-backward
+
 setopt hist_ignore_all_dups inc_append_history
 HISTFILE=~/.zhistory
 HISTSIZE=4096
