@@ -12,13 +12,13 @@ sudo apt-get -y install vim xfonts-terminus fonts-inconsolata xfce4-clipman git
 sudo fc-cache -fv
 mkdir -p ~/.config/xfce4/terminal
 echo 'MiscHighlightUrls=FALSE' >> ~/.config/xfce4/terminal/terminalrc
-xfce4-clipman &
 
+xfce4-clipman &
 # Add Clipman to 'Session and Startup' Application Autostart tab settings
 # Right-click clipman, choose Properties and choose 'Sync selections'
+
 # Install Docker: https://docs.docker.com/engine/installation/linux/ubuntu
 # Use 'xenial' in place of $(lsb_release -cs) for the docker repo
-
 sudo usermod -aG docker <USER>
 curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname -s`-`uname -m` > ~/bin/docker-compose
 chmod +x ~/bin/docker-compose
