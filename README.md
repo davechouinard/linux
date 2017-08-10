@@ -19,6 +19,7 @@ xfce4-clipman &
 # Install Docker: https://docs.docker.com/engine/installation/linux/ubuntu
 # Use 'xenial' in place of $(lsb_release -cs) for the docker repo
 
+sudo usermod -aG docker <USER>
 curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname -s`-`uname -m` > ~/bin/docker-compose
 chmod +x ~/bin/docker-compose
 
