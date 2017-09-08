@@ -1,7 +1,7 @@
 # Ubuntu xenial xfce VirtualBox desktop setup
 
 ```
-dockerComposeVersion=1.14.0
+dockerComposeVersion=1.15.0
 mkdir -p ~/bin
 sudo vi /etc/gai.conf # line 54 uncomment: precedence ::ffff:0:0/96  100
 sudo apt-get -y remove libreoffice-common vlc thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
