@@ -5,8 +5,8 @@
   a = add --all
   #############
   c = commit
-  ca = commit -a
   cm = commit -m
+  acm = !git add --all . && git commit -m
   #############
   d = diff
   #############
