@@ -8,7 +8,7 @@ sudo apt-get -y remove libreoffice-common vlc thunderbird gimp* pidgin* rhythmbo
 sudo apt-get clean
 sudo apt-get -y autoremove
 sudo apt-get update
-sudo apt-get -y install vim xfonts-terminus fonts-inconsolata xfce4-clipman git
+sudo apt-get -y install vim xfonts-terminus fonts-inconsolata xfce4-clipman git i3-wm i3status terminator
 sudo fc-cache -fv
 mkdir -p ~/.config/xfce4/terminal
 echo 'MiscHighlightUrls=FALSE' >> ~/.config/xfce4/terminal/terminalrc
