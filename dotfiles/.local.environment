@@ -23,6 +23,7 @@ alias mux='tmuxinator'
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+alias eg='vim ~/.gitconfig'
 
 export EDITOR='vim'
 
