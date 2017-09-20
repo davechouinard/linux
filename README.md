@@ -27,7 +27,8 @@ chmod +x ~/bin/docker-compose
 
 cd ~
 git clone https://github.com/davechouinard/linux.git
-cd linux/dotfiles ; ./copy.sh
+cd linux/dotfiles ; ./copy.sh ; cd ~
+cd linux/fonts ; ./install.sh ; cd ~
 
 echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> .bashrc
 
