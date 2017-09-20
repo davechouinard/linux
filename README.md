@@ -25,8 +25,7 @@ chmod +x ~/bin/docker-compose
 
 # Add search lines for domains to: /etc/resolvconf/resolv.conf.d/base
 
-cd ~
-git clone https://github.com/davechouinard/linux.git
+cd ~ ; git clone https://github.com/davechouinard/linux.git
 cd linux/dotfiles ; ./copy.sh ; cd ~
 cd linux/fonts ; ./install.sh ; cd ~
 
