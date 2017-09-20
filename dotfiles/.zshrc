@@ -1,6 +1,4 @@
-autoload -Uz compinit promptinit
-compinit
-promptinit
+export TERM="xterm-256color"
 
 # Fix backward search inside tmux
 bindkey '^R' history-incremental-search-backward
@@ -10,131 +8,36 @@ HISTFILE=~/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
 
-source "$HOME/.local.environment"
+source $HOME/.local.environment
 source /usr/local/bin/aws_zsh_completer.sh
 alias history='history 0'
 
 zstyle ':completion:*' menu select
 
-_tmuxinator() {
-  local commands projects
-  commands=(${(f)"$(tmuxinator commands zsh)"})
-  projects=(${(f)"$(tmuxinator completions start)"})
+fpath=(~/zsh/zsh-completions/src $fpath)
 
-  if (( CURRENT == 2 )); then
-    _describe -t commands "tmuxinator subcommands" commands
-    _describe -t projects "tmuxinator projects" projects
-  elif (( CURRENT == 3)); then
-    case $words[2] in
-      copy|debug|delete|open|start)
-        _arguments '*:projects:($projects)'
-      ;;
-    esac
-  fi
+POWERLEVEL9K_MODE='awesome-fontconfig'
+source ~/zsh/powerlevel9k/powerlevel9k.zsh-theme
+source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-  return
-}
-
-compdef _tmuxinator tmuxinator mux
-
-# prompt style and colors based on Steve Losh's Prose theme:
-# http://github.com/sjl/oh-my-zsh/blob/master/themes/prose.zsh-theme
-#
-# vcs_info modifications from Bart Trojanowski's zsh prompt:
-# http://www.jukie.net/bart/blog/pimping-out-zsh-prompt
-#
-# git untracked files modification from Brian Carper:
-# http://briancarper.net/blog/570/git-info-in-your-zsh-prompt
-
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-function virtualenv_info {
-    [ $VIRTUAL_ENV ] && echo '('%F{blue}`basename $VIRTUAL_ENV`%f') '
-}
-PR_GIT_UPDATE=1
-
-setopt prompt_subst
-
-autoload -U add-zsh-hook
-autoload -Uz vcs_info
-
-#use extended color palette if available
-if [[ $terminfo[colors] -ge 256 ]]; then
-    turquoise="%F{81}"
-    orange="%F{166}"
-    purple="%F{135}"
-    hotpink="%F{161}"
-    limegreen="%F{118}"
-else
-    turquoise="%F{cyan}"
-    orange="%F{yellow}"
-    purple="%F{magenta}"
-    hotpink="%F{red}"
-    limegreen="%F{green}"
-fi
-
-# enable VCS systems you use
-zstyle ':vcs_info:*' enable git
-
-# check-for-changes can be really slow.
-# you should disable it, if you work with large repositories
-zstyle ':vcs_info:*:prompt:*' check-for-changes true
-
-# set formats
-# %b - branchname
-# %u - unstagedstr (see below)
-# %c - stagedstr (see below)
-# %a - action (e.g. rebase-i)
-# %R - repository path
-# %S - path in the repository
-PR_RST="%f"
-FMT_BRANCH="(%{$turquoise%}%b%u%c${PR_RST})"
-FMT_ACTION="(%{$limegreen%}%a${PR_RST})"
-FMT_UNSTAGED="%{$orange%}●"
-FMT_STAGED="%{$limegreen%}●"
-
-zstyle ':vcs_info:*:prompt:*' unstagedstr   "${FMT_UNSTAGED}"
-zstyle ':vcs_info:*:prompt:*' stagedstr     "${FMT_STAGED}"
-zstyle ':vcs_info:*:prompt:*' actionformats "${FMT_BRANCH}${FMT_ACTION}"
-zstyle ':vcs_info:*:prompt:*' formats       "${FMT_BRANCH}"
-zstyle ':vcs_info:*:prompt:*' nvcsformats   ""
-
-
-function steeef_preexec {
-    case "$(history $HISTCMD)" in
-        *git*)
-            PR_GIT_UPDATE=1
-            ;;
-        *svn*)
-            PR_GIT_UPDATE=1
-            ;;
-    esac
-}
-add-zsh-hook preexec steeef_preexec
-
-function steeef_chpwd {
-    PR_GIT_UPDATE=1
-}
-add-zsh-hook chpwd steeef_chpwd
-
-function steeef_precmd {
-    if [[ -n "$PR_GIT_UPDATE" ]] ; then
-        # check for untracked files or updated submodules, since vcs_info doesn't
-        if git ls-files --other --exclude-standard 2> /dev/null | grep -q "."; then
-            PR_GIT_UPDATE=1
-            FMT_BRANCH="(%{$turquoise%}%b%u%c%{$hotpink%}●${PR_RST})"
-        else
-            FMT_BRANCH="(%{$turquoise%}%b%u%c${PR_RST})"
-        fi
-        zstyle ':vcs_info:*:prompt:*' formats "${FMT_BRANCH} "
-
-        vcs_info 'prompt'
-        PR_GIT_UPDATE=
+if [ -z "$TMUX" ]; then                     # not already in a tmux session
+  if [ ! -z "$SSH_TTY" ]; then              # we logged in via ssh (interactive)
+    if [ `pgrep -u $USER ssh-agent` ];then  # ssh-agent already setup
+      export SSH_AGENT_PID=`pgrep -u $USER ssh-agent`
+      export SSH_AUTH_SOCK=$HOME/.ssh/ssh_auth_sock
+    else                                    # do the ssh-agent setup
+      `ssh-agent -k`
+      rm -f $SSH_AUTH_SOCK
+      unset SSH_AUTH_SOCK
+      unset SSH_AGENT_PID
+      export SSH_AUTH_SOCK=$HOME/.ssh/ssh_auth_sock
+      `pgrep -u $USER ssh-agent | xargs kill 2>/dev/null`
+      ssh-agent -a $SSH_AUTH_SOCK -s
+      export SSH_AGENT_PID=`pgrep -u $USER ssh-agent`
+      ssh-add $HOME/.ssh/id_rsa
     fi
-}
-add-zsh-hook precmd steeef_precmd
 
-PROMPT=$'
-%{$purple%}%n${PR_RST} at %{$orange%}%m${PR_RST} in %{$limegreen%}%~${PR_RST} $vcs_info_msg_0_$(virtualenv_info)
-$ '
-
+    tmux && exec true;
+  fi
+fi
