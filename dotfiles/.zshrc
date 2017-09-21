@@ -1,16 +1,15 @@
 export TERM="xterm-256color"
 
-# Fix backward search inside tmux
+# History related tweaks
 bindkey '^R' history-incremental-search-backward
-
-setopt hist_ignore_all_dups inc_append_history
+setopt append_history
 HISTFILE=~/.zhistory
 HISTSIZE=4096
 SAVEHIST=4096
-
-source $HOME/.local.environment
-source /usr/local/bin/aws_zsh_completer.sh
 alias history='history 0'
+
+[[ -f $HOME/.local.environment ]] && source $HOME/.local.environment
+[[ -f /usr/local/bin/aws_zsh_completer.sh ]] && source /usr/local/bin/aws_zsh_completer.sh
 
 zstyle ':completion:*' menu select
 
@@ -21,12 +20,12 @@ source ~/zsh/powerlevel9k/powerlevel9k.zsh-theme
 source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-if [ -z "$TMUX" ]; then                     # not already in a tmux session
-  if [ ! -z "$SSH_TTY" ]; then              # we logged in via ssh (interactive)
-    if [ `pgrep -u $USER ssh-agent` ];then  # ssh-agent already setup
+if [[ -z "$TMUX" ]]; then                     # not already in a tmux session
+  if [[ ! -z "$SSH_TTY" ]]; then              # we logged in via ssh (interactive)
+    if [[ `pgrep -u $USER ssh-agent` ]];then  # ssh-agent already setup
       export SSH_AGENT_PID=`pgrep -u $USER ssh-agent`
       export SSH_AUTH_SOCK=$HOME/.ssh/ssh_auth_sock
-    else                                    # do the ssh-agent setup
+    else                                      # do the ssh-agent setup
       `ssh-agent -k`
       rm -f $SSH_AUTH_SOCK
       unset SSH_AUTH_SOCK
