@@ -16,9 +16,9 @@ zstyle ':completion:*' menu select
 fpath=(~/zsh/zsh-completions/src $fpath)
 
 POWERLEVEL9K_MODE='awesome-fontconfig'
-source ~/zsh/powerlevel9k/powerlevel9k.zsh-theme
-source ~/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -f $HOME/zsh/powerlevel9k/powerlevel9k.zsh-theme ]] && source $HOME/zsh/powerlevel9k/powerlevel9k.zsh-theme
+[[ -f $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[[ -f $HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 if [[ -z "$TMUX" ]]; then                     # not already in a tmux session
   if [[ ! -z "$SSH_TTY" ]]; then              # we logged in via ssh (interactive)
