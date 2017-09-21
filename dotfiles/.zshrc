@@ -10,6 +10,7 @@ alias history='history 0'
 
 bindkey '\e[H' beginning-of-line
 bindkey '\e[F' end-of-line
+bindkey '\e[3~' delete-char
 
 [[ -f $HOME/.local.environment ]] && source $HOME/.local.environment
 [[ -f /usr/local/bin/aws_zsh_completer.sh ]] && source /usr/local/bin/aws_zsh_completer.sh
