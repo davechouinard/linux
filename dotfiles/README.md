@@ -11,5 +11,3 @@ FILE .zshrc
 FILE .tmux.conf
 
 FILE .local.environment
-
-FILE zsh

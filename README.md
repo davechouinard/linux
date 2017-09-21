@@ -3,6 +3,7 @@
 ```
 dockerComposeVersion=1.15.0
 mkdir -p ~/bin
+mkdir -p ~/zsh
 sudo vi /etc/gai.conf # line 54 uncomment: precedence ::ffff:0:0/96  100
 sudo apt-get -y remove libreoffice-common vlc thunderbird gimp* pidgin* rhythmbox* xfburn xplayer*
 sudo apt-get clean
@@ -28,6 +29,12 @@ chmod +x ~/bin/docker-compose
 cd ~ ; git clone https://github.com/davechouinard/linux.git
 cd linux/dotfiles ; ./copy.sh ; cd ~
 cd linux/fonts ; ./install.sh ; cd ~
+
+cd zsh
+git clone https://github.com/bhilburn/powerlevel9k.git
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone git://github.com/zsh-users/zsh-autosuggestions
+git clone git://github.com/zsh-users/zsh-completions.git
 
 echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> .bashrc
 
