@@ -24,6 +24,9 @@ POWERLEVEL9K_MODE='awesome-fontconfig'
 [[ -f $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f $HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# This section will run tmux if not already started.  Before tmux starts
+# ssh-agent will be run to share the key in all new tmux windows.
+# This prevents having to unlock the key every time a new tmux window is created.
 if [[ -z "$TMUX" ]]; then                     # not already in a tmux session
   if [[ ! -z "$SSH_TTY" ]]; then              # we logged in via ssh (interactive)
     if [[ `pgrep -u $USER ssh-agent` ]];then  # ssh-agent already setup
