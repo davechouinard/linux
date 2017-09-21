@@ -35,7 +35,7 @@ if [ -z "$TMUX" ]; then                     # not already in a tmux session
       `pgrep -u $USER ssh-agent | xargs kill 2>/dev/null`
       ssh-agent -a $SSH_AUTH_SOCK -s
       export SSH_AGENT_PID=`pgrep -u $USER ssh-agent`
-      ssh-add -t 9h $HOME/.ssh/id_rsa
+      ssh-add $HOME/.ssh/id_rsa
     fi
 
     tmux && exec true;
