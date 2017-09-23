@@ -1,7 +1,7 @@
 # Ubuntu xenial xfce VirtualBox desktop setup
 
 ```
-dockerComposeVersion=1.15.0
+dockerComposeVersion=1.16.1
 mkdir -p ~/bin
 mkdir -p ~/zsh
 sudo vi /etc/gai.conf # line 54 uncomment: precedence ::ffff:0:0/96  100
@@ -21,8 +21,8 @@ xfce4-clipman &
 # Install Docker: https://docs.docker.com/engine/installation/linux/ubuntu
 # Use 'xenial' in place of $(lsb_release -cs) for the docker repo
 sudo usermod -aG docker <USER>
-curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname -s`-`uname -m` > ~/bin/docker-compose
-chmod +x ~/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/$dockerComposeVersion/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
 
 # Add search lines for domains to: /etc/resolvconf/resolv.conf.d/base
 
