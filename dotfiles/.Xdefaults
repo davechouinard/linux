@@ -1,5 +1,5 @@
-URxvt.font:xft:Terminus:style:pixelsize=12
-URxvt.boldfont:xft:Terminus:style=Bold:pixelsize=12
+URxvt.font:xft:Terminus:style:pixelsize=13
+URxvt.boldfont:xft:Terminus:style=Bold:pixelsize=13
 
 URxvt.perl-ext-common: selection-to-clipboard
 
