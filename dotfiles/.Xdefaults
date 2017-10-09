@@ -3,6 +3,8 @@ URxvt.boldfont:xft:Terminus:style=Bold:pixelsize=12
 
 URxvt.perl-ext-common: selection-to-clipboard
 
+URxvt.scrollBar: false
+
 *background: #002b36
 *foreground: #839496
 
