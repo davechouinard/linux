@@ -4,6 +4,7 @@ alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 alias free='free -m'
 alias grep='grep --colour=auto'
+alias clipboard='VBoxClient --clipboard'
 
 # aliases for Docker
 alias dps='docker ps -a'
