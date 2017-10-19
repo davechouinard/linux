@@ -89,6 +89,17 @@
     cursor_color = "#ffffff"
     foreground_color = "#f8f8f2"
     palette = "#75715e:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5:#272822:#f92672:#a6e22e:#f4bf75:#66d9ef:#ae81ff:#2aa198:#f9f8f5"
+  [[nord]]
+    copy_on_selection = True
+    font = Terminus 8
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+    background_color = "#2E3440"
+    cursor_color = "#D8DEE9"
+    foreground_color = "#D8DEE9"
+    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
   [[Ocean dark]]
     copy_on_selection = True
     font = Terminus 8
