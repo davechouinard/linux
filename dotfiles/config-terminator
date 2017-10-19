@@ -65,6 +65,18 @@
     cursor_color = "#657B83"
     foreground_color = "#C3C7D1"
     palette = "#073641:#EB606B:#C3E88D:#F7EB95:#80CBC3:#FF2490:#AEDDFF:#FFFFFF:#002B36:#EB606B:#C3E88D:#F7EB95:#7DC6BF:#6C71C3:#34434D:#FFFFFF"
+  [[Materialshell]]
+    copy_on_selection = True
+    font = Terminus 8
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+    background_color = "#151515"
+    background_image = None
+    cursor_color = "#FF5252"
+    foreground_color = "#A1B0B8"
+    palette = "#252525:#FF5252:#C3D82C:#FFC135:#42A5F5:#D81B60:#00ACC1:#F5F5F5:#708284:#FF5252:#C3D82C:#FFC135:#42A5F5:#D81B60:#00ACC1:#F5F5F5"
   [[Molokai]]
     copy_on_selection = True
     font = Terminus 8
