@@ -124,18 +124,17 @@
     cursor_color = "#676c76"
     foreground_color = "#5c6370"
     palette = "#000000:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#abb2bf:#5c6370:#e06c75:#98c379:#d19a66:#61afef:#c678dd:#56b6c2:#fffefe"
-  [[SpaceGray]]
+  [[Smyck]]
     copy_on_selection = True
     font = Terminus 8
     scrollback_infinite = True
     scrollbar_position = hidden
     show_titlebar = False
     use_system_font = False
-    palette = "#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#b3b8c3:#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#ffffff"
-    background_color = "#20242d"
-    cursor_color = "#b3b8c3"
-    foreground_color = "#b3b8c3"
-    background_image = None
+    palette = "#000000:#c75646:#8eb33b:#d0b03c:#72b3cc:#c8a0d1:#218693:#b0b0b0:#5d5d5d:#e09690:#cdee69:#ffe377:#9cd9f0:#fbb1f9:#77dfd8:#f7f7f7"
+    cursor_color = "#c75646"
+    foreground_color = "#f7f7f7"
+    background_color = "#2d2d2d"
   [[Solarized Dark]]
     copy_on_selection = True
     font = Terminus 8
@@ -171,6 +170,18 @@
     background_color = "#001e27"
     cursor_color = "#f34b00"
     foreground_color = "#9cc2c3"
+    background_image = None
+  [[SpaceGray]]
+    copy_on_selection = True
+    font = Terminus 8
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+    palette = "#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#b3b8c3:#000000:#b04b57:#87b379:#e5c179:#7d8fa4:#a47996:#85a7a5:#ffffff"
+    background_color = "#20242d"
+    cursor_color = "#b3b8c3"
+    foreground_color = "#b3b8c3"
     background_image = None
   [[Tomorrow Night]]
     copy_on_selection = True
