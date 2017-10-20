@@ -1,13 +1,17 @@
 #!/bin/bash
-# assumes 20G disk
+# assumes 20G disk, two dhcp interfaces at enp0s3 and enp0s8
 # replace 'myhostname' in this script with something actual
+# wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux1.sh
+# wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux2.sh
+# chmod +x *.sh
+# ./archlinux1.sh
+# ./archlinux2.sh
 
 timedatectl set-ntp true
 (
 echo n
 echo p
 echo 1
-echo
 echo
 echo +19G
 echo n
@@ -19,7 +23,7 @@ echo t
 echo 2
 echo 82
 echo w
-) | fdisk
+) | fdisk /dev/sda
 
 mkswap /dev/sda2
 swapon /dev/sda2
@@ -36,6 +40,7 @@ grep 'edu/' mirrorlist.orig > mirrorlist
 pacstrap /mnt base
 
 genfstab -U /mnt >> /mnt/etc/fstab
+cp archlinux2.sh /mnt
 arch-chroot /mnt
 
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
