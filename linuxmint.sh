@@ -13,7 +13,7 @@ git clone git://github.com/zsh-users/zsh-completions.git ~/zsh/zsh-completions
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/github-source/linux
-ansible-playbook playbook.yml
+ansible-playbook linuxmint-playbook.yml
 
 cd ~/github-source/linux/dotfiles ; ./copy.sh 
 vim +PluginInstall +qall
