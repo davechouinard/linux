@@ -21,8 +21,13 @@
       apt: name={{ item }} state=absent update_cache=no
       with_items:
         - libreoffice-common
+        - libreoffice-style-*
+        - mint-artwork-* 
+        - mint-backgrounds-* 
+        - mint-*-icons
         - vlc
         - thunderbird
+        - fonts-noto-*
         - gimp*
         - pidgin*
         - rhythmbox*
