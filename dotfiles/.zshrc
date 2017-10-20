@@ -19,7 +19,7 @@ zstyle ':completion:*' menu select
 
 fpath=(~/zsh/zsh-completions/src $fpath)
 
-POWERLEVEL9K_MODE='awesome-fontconfig'
+##POWERLEVEL9K_MODE='awesome-fontconfig'
 ##POWERLEVEL9K_MODE='nerdfont-complete'
 [[ -f $HOME/zsh/powerlevel9k/powerlevel9k.zsh-theme ]] && source $HOME/zsh/powerlevel9k/powerlevel9k.zsh-theme
 [[ -f $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

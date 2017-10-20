@@ -11,3 +11,5 @@ FILE .zshrc
 FILE .tmux.conf
 
 FILE .local.environment
+
+FILE .i3status.conf
