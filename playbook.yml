@@ -10,13 +10,6 @@
 
   tasks:
 
-    - name: Prefer IPv4
-      lineinfile:
-        dest: /etc/gai.conf
-        state: present
-        line: 'precedence ::ffff:0:0/96  100'
-        insertafter: '^#precedence ::ffff:0:0/96  100'
-
     - name: Remove packages
       apt: name={{ item }} state=absent update_cache=no
       with_items:
