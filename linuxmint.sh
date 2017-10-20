@@ -24,5 +24,5 @@ echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> ~/.bashrc
 
 cd ~/github-source/linux/fonts ; ./install.sh
 
-echo 'update the system and reboot'
+echo 'recommend running: sudo apt autoremove && sudo apt-get upgrade'
 exit 0
