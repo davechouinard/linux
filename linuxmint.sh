@@ -1,4 +1,5 @@
 #!/bin/bash
+# wget https://raw.githubusercontent.com/davechouinard/linux/master/linuxmint.sh && chmod +x *.sh
 # Add search lines for domains to: /etc/resolvconf/resolv.conf.d/base
 
 mkdir -p ~/github-source; mkdir -p ~/zsh; mkdir -p ~/.vim/bundle; mkdir -p ~/.config/terminator
