@@ -44,6 +44,5 @@ cp archlinux2.sh /mnt
 arch-chroot /mnt
 
 umount -R /mnt
-echo 'press any key for shutdown'
-read x
-halt
+echo 'type halt to shutdown, remove the iso image and reboot'
+exit 0
