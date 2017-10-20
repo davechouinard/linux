@@ -11,7 +11,7 @@ echo 'KEYMAP=dvorak' > /etc/vconsole.conf
 echo 'myhostname' > /etc/hostname
 echo '127.0.1.1	myhostname.localdomain	myhostname' >> /etc/hosts
 
-pacman -S grub
+pacman -S --noconfirm grub
 grub-install /dev/sda
 grub-mkconfig -o /boot/grub/grub.cfg
 
