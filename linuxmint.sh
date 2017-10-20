@@ -2,6 +2,7 @@
 # wget https://raw.githubusercontent.com/davechouinard/linux/master/linuxmint.sh && chmod +x *.sh
 # Add search lines for domains to: /etc/resolvconf/resolv.conf.d/base
 
+sudo apt-get update && sudo apt-get -y install ansible git
 mkdir -p ~/github-source; mkdir -p ~/zsh; mkdir -p ~/.vim/bundle; mkdir -p ~/.config/terminator
 git clone https://github.com/davechouinard/linux.git ~/github-source/linux
 git clone https://github.com/bhilburn/powerlevel9k.git ~/zsh/powerlevel9k
@@ -11,7 +12,7 @@ git clone git://github.com/zsh-users/zsh-completions.git ~/zsh/zsh-completions
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/github-source/linux
-sudo apt-get update && sudo apt-get -y install ansible && ansible-playbook playbook.yml
+ansible-playbook playbook.yml
 
 cd ~/github-source/linux/dotfiles ; ./copy.sh 
 vim +PluginInstall +qall
