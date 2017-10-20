@@ -21,4 +21,5 @@ systemctl enable dhcpcd@enp0s8.service
 echo 'net.ipv6.conf.all.disable_ipv6 = 1' > /etc/sysctl.d/40-ipv6.conf
 
 passwd
-exit
+echo 'type exit to exit chroot'
+exit 0
