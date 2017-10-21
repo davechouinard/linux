@@ -18,13 +18,4 @@ sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //g' /etc/sudoers
 systemctl enable vboxservice.service
 systemctl start vboxservice.service
 
-cat << EOF > /home/dave/.xinitrc
-setxkbmap -variant dvorak
-VBoxClient --clipboard 
-VBoxClient --display
-exec i3
-EOF
-
-echo "login as 'dave', type: startx"
-
 exit 0
