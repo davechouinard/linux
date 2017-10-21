@@ -1,4 +1,5 @@
 #!/bin/bash
+# run this last after git and other system packages have been installed
 
 mkdir -p ~/github-source; mkdir -p ~/zsh; mkdir -p ~/.vim/bundle; mkdir -p ~/.config/terminator
 git clone https://github.com/davechouinard/linux.git ~/github-source/linux
