@@ -8,8 +8,8 @@ HISTSIZE=4096
 SAVEHIST=4096
 alias history='history 0'
 
-bindkey '\e[H' beginning-of-line
-bindkey '\e[F' end-of-line
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[4~' end-of-line
 bindkey '\e[3~' delete-char
 
 [[ -f $HOME/.local.environment ]] && source $HOME/.local.environment
