@@ -18,4 +18,10 @@ echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> ~/.bashrc
 
 cd ~/github-source/linux/fonts ; ./install.sh
 
+# arch font has a different name
+if [[ -f /etc/arch-release ]];
+then
+  sed -i '/font = Terminus 8/s/Terminus/xos4 Terminus/g' .config/terminator/config
+fi
+
 exit 0
