@@ -27,17 +27,11 @@ fpath=(~/zsh/zsh-completions/src $fpath)
 
 # This section will run tmux if not already started.  Before tmux starts
 # ssh-agent will be run to share the keys in all new tmux windows.
-if [[ -z "$TMUX" ]]; then                     # not already in a tmux session
-  if [[ ! -z "$SSH_TTY" ]]; then              # we logged in via ssh (interactive)
-    if [[ -z "$SSH_AUTH_SOCK" ]]; then
-      export SSH_AUTH_SOCK="$HOME/.ssh/.auth_socket"
-    fi
-
-    if [[ ! -S "$SSH_AUTH_SOCK" ]]; then
-      ssh-agent -a $SSH_AUTH_SOCK > /dev/null 2>&1
-      ssh-add 2>/dev/null
-    fi
-
-    tmux && exec true;
+if [[ -z "$TMUX" ]] && [[ $- == *i* ]]; then      # not already in a tmux session and interactive
+  export SSH_AUTH_SOCK="$HOME/.ssh/.auth_socket"
+  if [[ ! -S "$SSH_AUTH_SOCK" ]]; then
+    ssh-agent -a $SSH_AUTH_SOCK > /dev/null 2>&1
+    ssh-add 2>/dev/null
   fi
+  tmux && exec true;
 fi
