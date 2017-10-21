@@ -6,6 +6,8 @@ passwd dave
 tee /etc/modules-load.d/loop.conf <<< "loop"
 modprobe loop 
 pacman -S --noconfirm docker
+systemctl start docker
+systemctl enable docker
 
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit \
 virtualbox-guest-utils i3 dmenu terminator ttf-dejavu terminus-font tmux zsh vim screenfetch
