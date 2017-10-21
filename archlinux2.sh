@@ -26,18 +26,17 @@ echo 'installing docker'
 tee /etc/modules-load.d/loop.conf <<< "loop"
 modprobe loop 
 pacman -S --noconfirm docker
-systemctl start docker
 systemctl enable docker
 
 echo 'installing packages'
 echo 'choose: virtualbox-guest-modules-arch'
-pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit \
+pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit openssh \
 virtualbox-guest-utils i3 dmenu terminator ttf-dejavu terminus-font tmux zsh vim screenfetch
 
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //g' /etc/sudoers
 
+systemctl enable sshd.socket
 systemctl enable vboxservice.service
-systemctl start vboxservice.service
 
 echo 'setting root passwd'
 passwd
