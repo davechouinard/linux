@@ -1,9 +1,5 @@
 #!/bin/bash
-# wget https://raw.githubusercontent.com/davechouinard/linux/master/linuxmint.sh && chmod +x *.sh
-# Add search lines for domains to: /etc/resolvconf/resolv.conf.d/base
 
-sudo sed -i '/precedence ::ffff:0:0\/96  100/s/^#//g' /etc/gai.conf
-sudo apt-get update && sudo apt-get -y install ansible git
 mkdir -p ~/github-source; mkdir -p ~/zsh; mkdir -p ~/.vim/bundle; mkdir -p ~/.config/terminator
 git clone https://github.com/davechouinard/linux.git ~/github-source/linux
 git clone https://github.com/bhilburn/powerlevel9k.git ~/zsh/powerlevel9k
@@ -11,9 +7,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh/zsh-syn
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/zsh/zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-completions.git ~/zsh/zsh-completions
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-cd ~/github-source/linux
-ansible-playbook linuxmint-playbook.yml
 
 cd ~/github-source/linux/dotfiles ; ./copy.sh 
 vim +PluginInstall +qall
@@ -24,5 +17,4 @@ echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> ~/.bashrc
 
 cd ~/github-source/linux/fonts ; ./install.sh
 
-echo 'recommend running: sudo apt autoremove && sudo apt-get upgrade'
 exit 0
