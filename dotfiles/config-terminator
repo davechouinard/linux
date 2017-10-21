@@ -41,30 +41,6 @@
     cursor_color = "#aaaaaa"
     foreground_color = "#f8f8f2"
     palette = "#44475a:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#94a3a5:#000000:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#ffffff"
-  [[Espresso]]
-    copy_on_selection = True
-    font = Terminus 8
-    scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-    palette = "#353535:#d25252:#a5c261:#ffc66d:#6c99bb:#d197d9:#bed6ff:#eeeeec:#535353:#f00c0c:#c2e075:#e1e48b:#8ab7d9:#efb5f7:#dcf4ff:#ffffff"
-    background_color = "#323232"
-    cursor_color = "#d6d6d6"
-    foreground_color = "#ffffff"
-    background_image = None
-  [[Material colors]]
-    copy_on_selection = True
-    font = Terminus 8
-    scrollback_infinite = True
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
-    background_color = "#1E282C"
-    background_image = None
-    cursor_color = "#657B83"
-    foreground_color = "#C3C7D1"
-    palette = "#073641:#EB606B:#C3E88D:#F7EB95:#80CBC3:#FF2490:#AEDDFF:#FFFFFF:#002B36:#EB606B:#C3E88D:#F7EB95:#7DC6BF:#6C71C3:#34434D:#FFFFFF"
   [[Materialshell]]
     copy_on_selection = True
     font = Terminus 8
