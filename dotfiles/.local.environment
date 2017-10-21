@@ -5,6 +5,8 @@ alias fgrep='fgrep --colour=auto'
 alias free='free -m'
 alias grep='grep --colour=auto'
 alias clipboard='VBoxClient --clipboard'
+alias display='VBoxClient --display'
+alias vi='vim'
 
 # aliases for Docker
 alias dps='docker ps -a'
