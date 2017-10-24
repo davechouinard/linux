@@ -32,15 +32,15 @@ mkfs.ext4 /dev/sda1
 
 mount /dev/sda1 /mnt
 mkdir /mnt/boot
+cp archlinux2.sh /mnt
 
 cd /etc/pacman.d
 mv mirrorlist mirrorlist.orig
 grep 'edu/' mirrorlist.orig > mirrorlist
 
 pacstrap /mnt base
-
 genfstab -U /mnt >> /mnt/etc/fstab
-cp archlinux2.sh /mnt
+
 arch-chroot /mnt
 
 umount -R /mnt
