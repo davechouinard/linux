@@ -21,7 +21,7 @@ cd ~/github-source/linux/fonts ; ./install.sh
 # arch font has a different name
 if [[ -f /etc/arch-release ]];
 then
-  sed -i '/font = Terminus/s/Terminus/xos4 Terminus/g' .config/terminator/config
+  sed -i '/font = Terminus/s/Terminus/xos4 Terminus/g' ~/.config/terminator/config
 fi
 
 exit 0
