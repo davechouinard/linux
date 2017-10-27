@@ -30,9 +30,11 @@ systemctl enable docker
 
 echo 'installing packages'
 echo 'choose: virtualbox-guest-modules-arch'
+sleep 5
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit \
 openssh virtualbox-guest-utils i3 dmenu terminator ttf-dejavu terminus-font \
-ansible python git tmux zsh vim screenfetch
+ansible python git ruby tmux zsh vim screenfetch
+gem install tmuxinator --no-user-install
 
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //g' /etc/sudoers
 
