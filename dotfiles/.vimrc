@@ -86,20 +86,21 @@ nnoremap N <c-w>k
 nnoremap S <c-w>l
 
 "===============================================================================
-" Setup language extensions
+" Setup extra language extensions
 "===============================================================================
 au BufNewFile,BufRead *.cft setlocal ft=yaml
 
+set encoding=utf-8
 
 "===============================================================================
-" NERDTree, airline, colorscheme options
+" NERDTree, tagbar, airline, colorscheme options
 "===============================================================================
 map <C-\> :NERDTreeToggle<CR>
 " uncomment these next two if nerdtree arrow fonts are bad in your terminal
 "let g:NERDTreeDirArrowExpandable = '+'
 "let g:NERDTreeDirArrowCollapsible = 'v'
 
-set encoding=utf-8
+nmap <F8> :TagbarToggle<CR>
 
 " comment out the next line if powerline fonts don't work in your terminal
 let g:airline_powerline_fonts = 1
@@ -115,5 +116,3 @@ let g:airline_powerline_fonts = 1
 
 set background=dark
 set nofoldenable
-
-nmap <F8> :TagbarToggle<CR>
