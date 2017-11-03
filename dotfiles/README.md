@@ -15,3 +15,5 @@ FILE .local.environment
 FILE .i3status.conf
 
 FILE .xinitrc
+
+FILE .ctags
