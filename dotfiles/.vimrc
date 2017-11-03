@@ -69,6 +69,7 @@ set numberwidth=5
 set ignorecase    " case insensitive search
 let &t_Co=256
 syntax on
+set encoding=utf-8
 
 "===============================================================================
 " softtabs, 2 spaces
@@ -89,8 +90,6 @@ nnoremap S <c-w>l
 " Setup extra language extensions
 "===============================================================================
 au BufNewFile,BufRead *.cft setlocal ft=yaml
-
-set encoding=utf-8
 
 "===============================================================================
 " NERDTree, tagbar, airline, colorscheme options
