@@ -17,12 +17,14 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 "
-Plugin 'flazz/vim-colorschemes'
-Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'pearofducks/ansible-vim'
+Plugin 'Glench/Vim-Jinja2-Syntax'
 Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'flazz/vim-colorschemes'
+
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -113,3 +115,5 @@ let g:airline_powerline_fonts = 1
 
 set background=dark
 set nofoldenable
+
+nmap <F8> :TagbarToggle<CR>
