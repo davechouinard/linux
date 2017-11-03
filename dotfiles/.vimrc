@@ -92,12 +92,23 @@ nnoremap S <c-w>l
 au BufNewFile,BufRead *.cft setlocal ft=yaml
 
 "===============================================================================
-" NERDTree, tagbar, airline, colorscheme options
+" NERDTree, airline, colorscheme options
 "===============================================================================
 map <C-\> :NERDTreeToggle<CR>
 " uncomment these next two if nerdtree arrow fonts are bad in your terminal
 "let g:NERDTreeDirArrowExpandable = '+'
 "let g:NERDTreeDirArrowCollapsible = 'v'
+
+"===============================================================================
+" Tagbar
+"===============================================================================
+let g:tagbar_type_ansible = {
+        \ 'ctagstype' : 'ansible',
+        \ 'kinds' : [
+                \ 't:tasks'
+        \ ],
+        \ 'sort' : 0
+\ }
 
 nmap <F8> :TagbarToggle<CR>
 
