@@ -108,6 +108,10 @@ let g:airline_powerline_fonts = 1
 "let g:airline_theme='solarized'
 "colorscheme solarized
 
+" Dracula theme
+"let g:airline_theme='dracula'
+"colorscheme dracula
+
 " One Dark theme
 "let g:airline_theme='onedark'
 "colorscheme onedark
