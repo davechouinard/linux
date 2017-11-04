@@ -11,11 +11,8 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 cd ~/github-source/linux/dotfiles ; ./copy.sh 
 vim +PluginInstall +qall
-[[ -d ~/.vim/bundle/vim-colorschemes ]] && cp vim/dracula.vim ~/.vim/bundle/vim-colorschemes/colors/dracula.vim
-[[ -d ~/.vim/bundle/vim-airline-themes ]] && cp vim/airline/dracula.vim ~/.vim/bundle/vim-airline-themes/autoload/airline/themes/dracula.vim
 [[ -d ~/.config/terminator ]] && cp config-terminator ~/.config/terminator/config
 echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> ~/.bashrc
-
 cd ~/github-source/linux/fonts ; ./install.sh
 
 # arch font has a different name
