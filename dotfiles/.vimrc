@@ -34,6 +34,7 @@ set encoding=utf-8
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set nofoldenable
 
 " Quicker movement for splits
 nnoremap H <c-w>h
@@ -81,4 +82,3 @@ let g:airline_powerline_fonts = 1
 "let g:onedark_termcolors=16
 
 set background=dark
-set nofoldenable
