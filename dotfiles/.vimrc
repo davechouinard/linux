@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'dracula/vim'
+Plug 'arcticicestudio/nord-vim'
 call plug#end()
 
 "===============================================================================
