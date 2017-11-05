@@ -78,6 +78,10 @@ let g:airline_powerline_fonts = 1
 "let g:airline_theme='dracula'
 "colorscheme dracula
 
+" Nord theme
+"let g:airline_theme='nord'
+"colorscheme nord
+
 " One Dark theme
 "let g:airline_theme='onedark'
 "colorscheme onedark
