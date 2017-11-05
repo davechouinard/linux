@@ -36,6 +36,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set nofoldenable
+set fillchars+=vert:\ 
 
 " Quicker movement for splits
 nnoremap H <c-w>h
