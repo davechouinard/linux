@@ -1,13 +1,15 @@
 #!/bin/bash
 # this script will be run inside the chroot
 
-##############################################
-# update myhostname and interfaces as desired
-echo 'myhostname' > /etc/hostname
-echo '127.0.1.1	myhostname.localdomain	myhostname' >> /etc/hosts
-systemctl enable dhcpcd@enp0s3.service
-systemctl enable dhcpcd@enp0s8.service
-##############################################
+echo 'hostname? '
+read myhostname
+
+echo 'interface? (e.g. enp0s3) '
+read myinterface
+
+echo "$myhostname" > /etc/hostname
+echo "127.0.1.1	$myhostname.localdomain	$myhostname" >> /etc/hosts
+systemctl enable dhcpcd@$myinterface.service
 
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 hwclock --systohc
@@ -28,6 +30,12 @@ modprobe loop
 pacman -S --noconfirm docker
 systemctl enable docker
 
+cat << EOF > /etc/docker/daemon.json
+{
+  "bip": "192.168.16.0/24"
+}
+EOF
+
 echo 'installing packages'
 echo 'choose: virtualbox-guest-modules-arch'
 sleep 5
@@ -45,7 +53,7 @@ echo 'setting root passwd'
 passwd
 
 useradd -m -G wheel -s /bin/bash dave
-echo 'setting user passwd'
+echo 'setting dave passwd'
 passwd dave
 
 echo 'if you have special dns domains to search'
