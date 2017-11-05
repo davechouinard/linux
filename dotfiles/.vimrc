@@ -82,6 +82,10 @@ let g:airline_powerline_fonts = 1
 "let g:airline_theme='nord'
 "colorscheme nord
 
+" Molokai theme
+"let g:airline_theme='molokai'
+"colorscheme molokai_dark
+
 " One Dark theme
 "let g:airline_theme='onedark'
 "colorscheme onedark
