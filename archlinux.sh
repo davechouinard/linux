@@ -1,6 +1,5 @@
 #!/bin/bash
-# assumes 20G disk, two dhcp interfaces at enp0s3 and enp0s8
-# replace 'myhostname' in this script with something actual
+# assumes 20G disk
 # wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux.sh
 # wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux2.sh
 # chmod +x *.sh
