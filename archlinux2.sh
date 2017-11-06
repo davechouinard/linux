@@ -1,14 +1,15 @@
 #!/bin/bash
 # this script will be run inside the chroot
 
-echo 'hostname? '
-read myhostname
+echo '-------------------------------------'
+ip addr
+echo '-------------------------------------'
 
-echo 'interface? (e.g. enp0s3) '
+echo 'dhcp interface? (e.g. enp0s3) '
 read myinterface
 
-echo "$myhostname" > /etc/hostname
-echo "127.0.1.1	$myhostname.localdomain	$myhostname" >> /etc/hosts
+echo 'archlinux' > /etc/hostname
+echo '127.0.1.1	archlinux.localdomain	archlinux' >> /etc/hosts
 systemctl enable dhcpcd@$myinterface.service
 
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
@@ -24,18 +25,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 echo 'net.ipv6.conf.all.disable_ipv6 = 1' > /etc/sysctl.d/40-ipv6.conf
 
-echo 'installing docker'
-tee /etc/modules-load.d/loop.conf <<< "loop"
-modprobe loop 
-pacman -S --noconfirm docker
-systemctl enable docker
-
-cat << EOF > /etc/docker/daemon.json
-{
-  "bip": "192.168.16.0/24"
-}
-EOF
-
 echo 'installing packages'
 echo
 echo 'choose: libglvnd and virtualbox-guest-modules-arch'
@@ -43,7 +32,19 @@ echo
 sleep 5
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit \
 openssh virtualbox-guest-utils i3 dmenu terminator ttf-dejavu terminus-font \
-ansible python git ruby tmux zsh vim ctags screenfetch
+python python-pip git ruby tmux zsh vim ctags screenfetch
+
+echo 'installing docker'
+tee /etc/modules-load.d/loop.conf <<< "loop"
+modprobe loop 
+pacman -S --noconfirm docker
+systemctl enable docker
+cat << EOF > /etc/docker/daemon.json
+{
+  "bip": "192.168.16.0/24"
+}
+EOF
+
 gem install tmuxinator --no-user-install
 
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //g' /etc/sudoers
