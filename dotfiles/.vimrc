@@ -69,25 +69,25 @@ let g:ctrlp_cmd = 'CtrlP'
 " comment out the next line if powerline fonts don't work
 let g:airline_powerline_fonts = 1
 
-" Solarized theme
-"let g:airline_theme='solarized'
-"colorscheme solarized
-
 " Dracula theme
 "let g:airline_theme='dracula'
 "colorscheme dracula
-
-" Nord theme
-"let g:airline_theme='nord'
-"colorscheme nord
 
 " Molokai theme
 "let g:airline_theme='molokai'
 "colorscheme molokai_dark
 
+" Nord theme
+"let g:airline_theme='nord'
+"colorscheme nord
+
 " One Dark theme
 "let g:airline_theme='onedark'
 "colorscheme onedark
 "let g:onedark_termcolors=16
+
+" Solarized theme
+"let g:airline_theme='solarized'
+"colorscheme solarized
 
 set background=dark
