@@ -27,7 +27,6 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " always display the status line
 set number        " display line numbers
-set numberwidth=5
 set ignorecase    " case insensitive search
 let &t_Co=256
 syntax on
