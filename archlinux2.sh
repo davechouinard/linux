@@ -59,6 +59,9 @@ useradd -m -G wheel -s /bin/bash dave
 echo 'setting dave passwd'
 passwd dave
 
+wget https://raw.githubusercontent.com/davechouinard/linux/master/environment-setup.sh
+chmod +x environment-setup.sh && mv environment-setup.sh /home/dave/
+
 echo 'if you have special dns domains to search'
 echo 'add: search_domains="<domain>" to /etc/resolvconf.conf'
 echo
