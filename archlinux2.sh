@@ -32,7 +32,7 @@ echo
 sleep 5
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit \
 openssh virtualbox-guest-utils i3 dmenu terminator ttf-dejavu terminus-font \
-python python-pip git ruby tmux zsh vim ctags screenfetch
+python python-pip git ruby tmux zsh vim ctags screenfetch wget
 
 echo 'installing docker'
 tee /etc/modules-load.d/loop.conf <<< "loop"
