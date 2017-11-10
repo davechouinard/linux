@@ -2,6 +2,11 @@
 URxvt.perl-ext-common: selection-to-clipboard
 URxvt.clipboard.autocopy: true
 
+URxvt.keysym.Home: \033[1~
+URxvt.keysym.End: \033[4~
+URxvt.keysym.KP_Home: \033[1~
+URxvt.keysym.KP_End:  \033[4~
+
 !URxvt.transparent:   true
 !URxvt.shading:       20
 URxvt.font: xft:xos4 Terminus:pixelsize=12
