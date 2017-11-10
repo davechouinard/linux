@@ -31,7 +31,7 @@ echo 'choose: libglvnd and virtualbox-guest-modules-arch'
 echo
 sleep 5
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit \
-openssh virtualbox-guest-utils i3 dmenu terminator ttf-dejavu terminus-font \
+openssh virtualbox-guest-utils i3 dmenu terminator feh ttf-dejavu terminus-font \
 python python-pip git ruby tmux zsh vim ctags screenfetch wget dnsutils
 
 echo 'installing docker'
