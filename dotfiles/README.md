@@ -17,3 +17,5 @@ FILE .i3status.conf
 FILE .xinitrc
 
 FILE .ctags
+
+FILE .Xdefaults
