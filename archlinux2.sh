@@ -30,9 +30,9 @@ echo
 echo 'choose: libglvnd and virtualbox-guest-modules-arch'
 echo
 sleep 5
-pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit \
-openssh virtualbox-guest-utils i3 dmenu terminator feh ttf-dejavu terminus-font \
-python python-pip git ruby tmux zsh vim ctags screenfetch wget dnsutils
+pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit virtualbox-guest-utils \
+openssh python python-pip git ruby tmux zsh vim ctags screenfetch wget dnsutils \
+i3 terminator rxvt-unicode ttf-dejavu terminus-font feh dmenu
 
 echo 'installing docker'
 tee /etc/modules-load.d/loop.conf <<< "loop"
