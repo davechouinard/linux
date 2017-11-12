@@ -12,6 +12,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 
 cd ~/github-source/linux/dotfiles; ./copy.sh 
 cp config-terminator ~/.config/terminator/config
+cp -a termite ~/.config/
 echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> ~/.bashrc
 cd ~/github-source/linux/fonts; ./install.sh
 cd
