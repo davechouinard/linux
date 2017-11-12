@@ -3,6 +3,7 @@
 
 mkdir -p ~/github-source; mkdir -p ~/zsh; mkdir -p ~/.config/terminator
 git clone https://github.com/davechouinard/linux.git ~/github-source/linux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/bhilburn/powerlevel9k.git ~/zsh/powerlevel9k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh/zsh-syntax-highlighting
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/zsh/zsh-autosuggestions
