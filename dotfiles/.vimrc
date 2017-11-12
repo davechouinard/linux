@@ -9,10 +9,7 @@ Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'flazz/vim-colorschemes'
-Plug 'dracula/vim'
-Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 call plug#end()
 
 "===============================================================================
@@ -69,25 +66,13 @@ let g:ctrlp_cmd = 'CtrlP'
 " comment out the next line if powerline fonts don't work
 let g:airline_powerline_fonts = 1
 
-" Dracula theme
-"let g:airline_theme='dracula'
-"colorscheme dracula
+let base16colorspace=256  " Access colors present in 256 colorspace
 
-" Molokai theme
-"let g:airline_theme='molokai'
-"colorscheme molokai_dark
-
-" Nord theme
-"let g:airline_theme='nord'
-"colorscheme nord
-
-" One Dark theme
-"let g:airline_theme='onedark'
-"colorscheme onedark
-"let g:onedark_termcolors=16
-
-" Solarized theme
-"let g:airline_theme='solarized'
-"colorscheme solarized
+"colorscheme base16-dracula
+"colorscheme base16-monokai
+"colorscheme base16-nord
+"colorscheme base16-onedark
+"colorscheme base16-solarized-dark
+"colorscheme base16-tomorrow-night
 
 set background=dark
