@@ -8,9 +8,10 @@ dynamic_title = true
 urgent_on_bell = true
 clickable_url = false
 font = Monospace 9
-#font = xos4 Terminus 12px
-#font = Inconsolata 14px
-#font = DejaVu Sans Mono 14px
+#font = xos4 Terminus 12
+#font = Misc Tamsyn 12
+#font = Inconsolata 12
+#font = DejaVu Sans Mono 10
 scrollback_lines = 10000
 search_wrap = true
 #icon_name = terminal
@@ -22,4 +23,4 @@ cursor_blink = system
 # "block", "underline" or "ibeam"
 cursor_shape = block
 
-# vim: ft=dosini cms=#%s
+
