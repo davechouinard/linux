@@ -17,3 +17,7 @@ FILE .i3status.conf
 FILE .xinitrc
 
 FILE .ctags
+
+FILE .config
+
+FILE .fonts
