@@ -44,7 +44,7 @@ pacman -S --noconfirm docker
 systemctl enable docker
 cat << EOF > /etc/docker/daemon.json
 {
-  "bip": "192.168.16.0/24"
+  "bip": "192.168.16.1/24"
 }
 EOF
 
