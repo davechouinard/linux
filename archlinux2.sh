@@ -31,8 +31,9 @@ echo 'choose: libglvnd and virtualbox-guest-modules-arch'
 echo
 sleep 5
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit virtualbox-guest-utils \
-openssh python python-pip git ruby tmux zsh vim ctags screenfetch wget dnsutils \
+openssh python python-pip git tmux zsh vim ctags screenfetch wget dnsutils \
 i3 termite terminus-font tamsyn-font ttf-inconsolata ttf-dejavu feh dmenu compton parcellite
+# ruby
 
 ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
 ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
@@ -48,7 +49,7 @@ cat << EOF > /etc/docker/daemon.json
 }
 EOF
 
-gem install tmuxinator --no-user-install
+# gem install tmuxinator --no-user-install
 
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //g' /etc/sudoers
 
