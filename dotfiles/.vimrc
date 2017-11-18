@@ -2,6 +2,8 @@
 " vim-plug
 "===============================================================================
 call plug#begin('~/.vim/plug')
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 Plug 'pearofducks/ansible-vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'scrooloose/nerdtree'
@@ -78,3 +80,7 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 "colorscheme base16-tomorrow-night
 
 set background=dark
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
