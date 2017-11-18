@@ -31,7 +31,7 @@ echo 'choose: libglvnd and virtualbox-guest-modules-arch'
 echo
 sleep 5
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit virtualbox-guest-utils \
-openssh python python2 python-pip git tmux zsh vim ctags screenfetch wget dnsutils \
+openssh python python-pip python2 git tmux zsh vim ctags screenfetch wget dnsutils \
 i3 termite terminus-font tamsyn-font ttf-inconsolata ttf-dejavu feh dmenu compton parcellite
 # ruby
 
