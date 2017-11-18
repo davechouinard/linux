@@ -1,6 +1,8 @@
 #!/bin/bash
 # run this last after git and other system packages have been installed
 
+pip install --user tmuxp
+
 #mkdir -p ~/github-source; mkdir -p ~/zsh
 git clone https://github.com/davechouinard/linux.git ~/github-source/linux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
