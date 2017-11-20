@@ -3,7 +3,6 @@
 
 pip install --user tmuxp
 
-#mkdir -p ~/github-source; mkdir -p ~/zsh
 git clone https://github.com/davechouinard/linux.git ~/github-source/linux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 git clone https://github.com/bhilburn/powerlevel9k.git ~/zsh/powerlevel9k
@@ -16,4 +15,5 @@ cd ~/github-source/linux/dotfiles; ./copy.sh
 fc-cache -vf ~/.fonts
 echo "[[ -f ~/.local.environment ]] && . ~/.local.environment" >> ~/.bashrc
 vim +PlugInstall
+echo 'logout and log back in'
 exit 0
