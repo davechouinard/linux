@@ -1,6 +1,6 @@
 [user]
-  email = root@localhost
-  name = Dave
+  email = 
+  name = 
 [alias]
   a = add --all
   #############
