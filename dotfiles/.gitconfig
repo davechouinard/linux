@@ -1,23 +1,51 @@
-[user]
-  email = 
-  name = 
 [alias]
   a = add --all
-  #############
+  brl = branch --list
+  cb = checkout -b
+  co = checkout
   c = commit
   cm = commit -m
-  acm = !git add --all . && git commit -m
-  #############
-  d = diff
-  #############
+  acm = !git add -A && git commit -m
+  d = diff --color-words
   ps = push
-  #############
   pl = pull
-  #############
   s = status
-  #############
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-  #############
+  hist = log --graph --pretty=custom           # Show custom graph
+  l = log --pretty=custom                      # Show custom log
+  ll = log --stat --abbrev-commit
+  lc = shortlog --summary --numbered           # List contributors
   url = remote show origin
+
+  # merge the current branch into master
+  mbr = "!f() { \
+    declare currentBranch=\"$(git symbolic-ref --short HEAD)\"; \
+    git pull origin master; \
+    git checkout master; \
+    git pull origin master; \
+    git merge --no-ff $currentBranch; \
+    git push; \
+  }; f"
+
+  delete-branch = "!f() { \
+    git branch -d \"$1\"; \
+    git push origin --delete \"$1\"; \
+  }; f"
+
+[pretty]
+  custom = "%C(magenta)%h%C(red)%d %C(yellow)%ar %C(green)%s %C(yellow)(%an)"
+  #                     │        │            │            │             └─ author name
+  #                     │        │            │            └─ message
+  #                     │        │            └─ date (relative)
+  #                     │        └─ decorations (branch, heads or tags)
+  #                     └─ hash (abbreviated)
+
+# Push easily http://stackoverflow.com/a/23918418/89484
 [push]
-  default = simple
+  # Make `git push` automatically push relevant
+  # annotated tags when pushing branches out
+  followTags = true
+  default = current
+
+# Use separate file for username / github token / etc
+[include]
+  path = ~/.gitconfig.local

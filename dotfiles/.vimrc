@@ -71,9 +71,8 @@ let g:airline_powerline_fonts = 1
 
 let base16colorspace=256  " Access colors present in 256 colorspace
 
-"colorscheme dracula
+colorscheme dracula
 "colorscheme base16-monokai
-"colorscheme base16-nord
 "colorscheme base16-onedark
 "colorscheme base16-solarized-dark
 "colorscheme base16-tomorrow-night
@@ -83,3 +82,4 @@ set background=dark
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
