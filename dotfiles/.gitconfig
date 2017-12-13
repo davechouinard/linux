@@ -1,6 +1,7 @@
 [alias]
   a = add --all
-  brl = branch --list
+  lb = branch --list                           # List local branches
+  lrb = ls-remote --heads origin               # List remote branches
   cb = checkout -b
   co = checkout
   c = commit
