@@ -1,10 +1,5 @@
 #!/bin/bash
 # assumes 20G disk
-# wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux.sh
-# wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux2.sh
-# chmod +x *.sh
-# ./archlinux.sh
-# ./archlinux2.sh
 
 timedatectl set-ntp true
 (
