@@ -14,7 +14,6 @@ declare -a FILES_TO_SYMLINK=(
   '.gitconfig'
   '.i3status.conf'
   '.local.environment'
-  'tmux-colors.sh'
   '.tmux.conf'
   '.vimrc'
   '.xinitrc'
