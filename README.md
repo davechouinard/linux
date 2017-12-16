@@ -13,7 +13,7 @@ chmod +x *.sh
 ./archlinux.sh
 ./archlinux2.sh
 # shutdown, remove ISO, reboot, login as root
-useradd -m -G wheel -s /bin/bash <username>
+useradd -m -G wheel,docker -s /bin/bash <username>
 passwd <username>
 exit
 # login as <username>
