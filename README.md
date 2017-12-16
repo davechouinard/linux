@@ -12,6 +12,12 @@ wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux2.sh
 chmod +x *.sh
 ./archlinux.sh
 ./archlinux2.sh
-# shutdown, remove ISO, reboot, login as normal user
-./user-setup.sh
+# shutdown, remove ISO, reboot, login as root
+useradd -m -G wheel -s /bin/bash <username>
+passwd <username>
+exit
+# login as normal user
+git clone https://github.com/davechouinard/linux.git ~/src/github.com/linux
+cd ~/src/github.com/linux/dotfiles
+./full-setup.sh
 ```
