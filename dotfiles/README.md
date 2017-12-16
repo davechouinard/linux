@@ -1,6 +1,6 @@
 # dotfiles
 
-## Core Tools
+Configurations for my core set of tools:
 
 * i3 - Window Manager
 * termite - Terminal
