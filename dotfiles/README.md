@@ -14,5 +14,11 @@ Configurations for my core set of tools:
 
 ## Usage
 
+Install everything, plugins etc. on a new machine:
+
+`./full-setup.sh`
+
+Dotfiles only:
+
 `./setup.sh`
 
