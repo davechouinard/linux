@@ -1,5 +1,8 @@
 export TERM="xterm-256color"
 
+autoload -U compinit
+compinit -u
+
 # History related tweaks
 bindkey '^R' history-incremental-search-backward
 setopt append_history
