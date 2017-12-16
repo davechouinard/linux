@@ -56,13 +56,6 @@ systemctl enable vboxservice.service
 echo 'setting root passwd'
 passwd
 
-useradd -m -G wheel -s /bin/bash dave
-echo 'setting dave passwd'
-passwd dave
-
-wget https://raw.githubusercontent.com/davechouinard/linux/master/user-setup.sh
-chmod +x user-setup.sh && mv user-setup.sh /home/dave/
-
 echo 'if you have special dns domains to search'
 echo 'add: search_domains="<domain>" to /etc/resolvconf.conf'
 echo
