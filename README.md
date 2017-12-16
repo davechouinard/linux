@@ -16,7 +16,7 @@ chmod +x *.sh
 useradd -m -G wheel -s /bin/bash <username>
 passwd <username>
 exit
-# login as normal user
+# login as <username>
 git clone https://github.com/davechouinard/linux.git ~/src/github.com/linux
 cd ~/src/github.com/linux/dotfiles
 ./full-setup.sh
