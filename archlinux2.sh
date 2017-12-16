@@ -48,8 +48,6 @@ cat << EOF > /etc/docker/daemon.json
 }
 EOF
 
-# gem install tmuxinator --no-user-install
-
 sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //g' /etc/sudoers
 
 systemctl enable sshd.socket
