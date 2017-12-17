@@ -58,6 +58,4 @@ passwd
 
 echo 'if you have special dns domains to search'
 echo 'add: search_domains="<domain>" to /etc/resolvconf.conf'
-echo
-echo 'type exit to exit chroot and finish the install'
 exit 0
