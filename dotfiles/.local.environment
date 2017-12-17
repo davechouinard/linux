@@ -1,3 +1,5 @@
+alias d='docker'
+alias di='docker images'
 alias g='git'
 alias v='vim'
 alias mv='mv -v'
@@ -13,10 +15,6 @@ alias clipboard='VBoxClient --clipboard'
 alias display='VBoxClient --display'
 alias vi='vim'
 alias netstat='ss'
-
-# aliases for Docker
-alias d='docker'
-alias di='docker images'
 
 # aliases for Tmux
 alias tmux='tmux -2'
