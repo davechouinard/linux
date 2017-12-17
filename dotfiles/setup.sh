@@ -5,12 +5,13 @@
 dir_backup=~/dotfiles_old
 mkdir -p $dir_backup
 
+## '.fonts'
+
 declare -a FILES_TO_SYMLINK=(
 
   'colors.sh'
   '.config'
   '.ctags'
-  '.fonts'
   '.gitconfig'
   '.i3status.conf'
   '.local.environment'
