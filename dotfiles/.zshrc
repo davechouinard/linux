@@ -25,7 +25,8 @@ fpath=(~/zsh/zsh-completions/src $fpath)
 POWERLEVEL9K_MODE='awesome-fontconfig'
 ##POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-[[ -f $HOME/zsh/powerlevel9k/powerlevel9k.zsh-theme ]] && source $HOME/zsh/powerlevel9k/powerlevel9k.zsh-theme
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
 [[ -f $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ]] && source $HOME/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -f $HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]] && source $HOME/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
