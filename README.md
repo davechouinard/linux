@@ -12,10 +12,10 @@ wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux2.sh
 chmod +x *.sh
 ./archlinux.sh
 ./archlinux2.sh
-# shutdown, remove ISO, reboot, login as root
 useradd -m -G wheel,docker -s /bin/bash <username>
 passwd <username>
 exit
+# shutdown, remove ISO, reboot
 # login as <username>
 git clone https://github.com/davechouinard/linux.git ~/src/github.com/linux
 cd ~/src/github.com/linux/dotfiles
