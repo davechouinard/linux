@@ -4,9 +4,19 @@ Configurations for my core set of tools:
 
 * i3 - Window Manager
 * termite - Terminal
-* zsh - Shell
 * tmux - Terminal multiplexer
 * vim - Editor
+    * airline
+    * ctrlp
+    * gitgutter
+    * nerdtree
+    * tagbar
+    * ultisnips
+* zsh - Shell
+    * autosuggestions
+    * completions
+    * syntax-highlighting
+    * powerlevel9k
 
 ## Screenshot
 
