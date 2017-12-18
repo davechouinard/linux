@@ -4,7 +4,7 @@
 
 pip install --user tmuxp
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-##git clone https://github.com/bhilburn/powerlevel9k.git ~/zsh/powerlevel9k
+git clone https://github.com/bhilburn/powerlevel9k.git ~/zsh/powerlevel9k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh/zsh-syntax-highlighting
 git clone git://github.com/zsh-users/zsh-autosuggestions ~/zsh/zsh-autosuggestions
 git clone git://github.com/zsh-users/zsh-completions.git ~/zsh/zsh-completions
