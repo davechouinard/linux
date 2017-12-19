@@ -13,10 +13,12 @@ declare -a FILES_TO_SYMLINK=(
   '.config'
   '.ctags'
   '.gitconfig'
+  '.i3blocks.conf'
   '.i3status.conf'
   '.local.environment'
   '.tmux.conf'
   '.vimrc'
+  'weather.py'
   '.xinitrc'
   '.zshrc'
 
