@@ -3,6 +3,7 @@
 Configurations for my core set of tools:
 
 * i3 - Window Manager
+    * i3blocks
 * termite - Terminal
 * tmux - Terminal multiplexer
 * vim - Editor
