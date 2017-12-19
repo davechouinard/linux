@@ -14,7 +14,6 @@ declare -a FILES_TO_SYMLINK=(
   '.ctags'
   '.gitconfig'
   '.i3blocks.conf'
-  '.i3status.conf'
   '.local.environment'
   '.tmux.conf'
   '.vimrc'
