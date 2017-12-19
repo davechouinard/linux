@@ -32,8 +32,8 @@ echo
 sleep 5
 pacman -S sudo xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit virtualbox-guest-utils \
 openssh python python-pip python2 git tmux zsh vim ctags screenfetch wget dnsutils \
-i3 termite terminus-font ttf-inconsolata ttf-dejavu feh dmenu compton parcellite make \
-awesome-terminal-fonts 
+i3 i3blocks termite terminus-font ttf-inconsolata ttf-dejavu feh dmenu compton parcellite \
+make awesome-terminal-fonts 
 
 ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
 ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
