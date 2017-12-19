@@ -156,3 +156,4 @@ bar {
 }
 
 exec --no-startup-id parcellite
+exec --no-startup-id compton
