@@ -30,7 +30,7 @@ cp archlinux2.sh /mnt
 
 cd /etc/pacman.d
 mv mirrorlist mirrorlist.orig
-grep 'edu/' mirrorlist.orig > mirrorlist
+grep 'kernel\.org' mirrorlist.orig > mirrorlist
 
 pacstrap /mnt base
 genfstab -U /mnt >> /mnt/etc/fstab
