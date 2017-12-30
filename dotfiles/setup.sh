@@ -9,6 +9,7 @@ mkdir -p $dir_backup
 
 declare -a FILES_TO_SYMLINK=(
 
+  '.bashrc'
   'colors.sh'
   '.config'
   '.ctags'
