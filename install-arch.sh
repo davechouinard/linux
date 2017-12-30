@@ -1,4 +1,6 @@
 #!/bin/bash
+# arch linux install script, run the base setup with 'base' option
+# then run the chroot setup with 'chroot' option
 
 if [[ "$1" == "base" ]]; then
 
@@ -50,16 +52,9 @@ if [[ "$1" == "chroot" ]]; then
 
   # this script will be run inside the chroot
 
-  echo '-------------------------------------'
-  ip addr
-  echo '-------------------------------------'
-
-  echo 'dhcp interface? (e.g. enp0s3) '
-  read myinterface
-
   echo 'archlinux' > /etc/hostname
   echo '127.0.1.1	archlinux.localdomain	archlinux' >> /etc/hosts
-  systemctl enable dhcpcd@$myinterface.service
+  systemctl enable dhcpcd@enp0s3.service
 
   ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
   hwclock --systohc
@@ -71,9 +66,9 @@ if [[ "$1" == "chroot" ]]; then
   pacman -S --noconfirm grub
   grub-install /dev/sda
   grub-mkconfig -o /boot/grub/grub.cfg
-
   echo 'net.ipv6.conf.all.disable_ipv6 = 1' > /etc/sysctl.d/40-ipv6.conf
-
+  echo
+  echo '###################'
   echo 'installing packages'
   echo
   echo 'choose: defaults and virtualbox-guest-modules-arch'
@@ -89,15 +84,17 @@ if [[ "$1" == "chroot" ]]; then
   ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
 
   echo 'installing docker'
-  tee /etc/modules-load.d/loop.conf <<< "loop"
-  modprobe loop 
-  pacman -S --noconfirm docker
-  systemctl enable docker
+  mkdir /etc/docker
   cat << EOF > /etc/docker/daemon.json
 {
   "bip": "192.168.16.1/24"
 }
 EOF
+
+  tee /etc/modules-load.d/loop.conf <<< "loop"
+  modprobe loop 
+  pacman -S --noconfirm docker
+  systemctl enable docker
 
   sed -i '/%wheel ALL=(ALL) NOPASSWD: ALL/s/^# //g' /etc/sudoers
 
