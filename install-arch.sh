@@ -81,7 +81,7 @@ if [[ "$1" == "chroot" ]]; then
   sleep 5
   pacman -S xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit virtualbox-guest-utils
 
-  pacman -S dnsutils make openssh python python-pip python2 sudo wget \
+  pacman -S --noconfirm dnsutils make openssh python python-pip python2 sudo wget \
     compton ctags dmenu feh git i3 i3blocks parcellite screenfetch termite tmux vim zsh \
     awesome-terminal-fonts terminus-font ttf-dejavu ttf-inconsolata 
 
