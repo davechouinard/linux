@@ -76,7 +76,7 @@ if [[ "$1" == "chroot" ]]; then
 
   echo 'installing packages'
   echo
-  echo 'choose: libglvnd and virtualbox-guest-modules-arch'
+  echo 'choose: defaults and virtualbox-guest-modules-arch'
   echo
   sleep 5
   pacman -S xf86-video-fbdev xf86-video-vesa xorg-server xorg-apps xorg-xinit virtualbox-guest-utils
