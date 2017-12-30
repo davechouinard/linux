@@ -7,11 +7,9 @@ This repo holds automation for Linux OS installs and dotfiles etc.
 Create a VirtualBox VM with a 20GB disk. Boot off the archlinux ISO.
 
 ```
-wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux.sh
-wget https://raw.githubusercontent.com/davechouinard/linux/master/archlinux2.sh
-chmod +x *.sh
-./archlinux.sh
-./archlinux2.sh
+wget https://raw.githubusercontent.com/davechouinard/linux/master/install-arch.sh
+sh ./install-arch.sh base
+sh ./install-arch.sh chroot
 useradd -m -G wheel,docker -s /bin/bash <username>
 passwd <username>
 exit
