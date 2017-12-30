@@ -31,9 +31,6 @@ alias ez='vim ~/.zshrc'
 alias eg='vim ~/.gitconfig'
 
 export EDITOR='vim'
-
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
-if [[ -x /usr/bin/screenfetch ]]; then
-  screenfetch
-fi
+-x /usr/bin/screenfetch && screenfetch
