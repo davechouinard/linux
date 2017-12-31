@@ -19,10 +19,6 @@ Configurations for my core set of tools:
     * syntax-highlighting
     * powerlevel9k
 
-## Screenshot
-
-![Screenshot](dotfiles.png)
-
 ## Usage
 
 Install everything, plugins etc. on a new machine:
