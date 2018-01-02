@@ -2,7 +2,7 @@
 
 This repo holds automation for Linux OS installs and dotfiles etc.
 
-## Arch Linux
+## Arch Linux Desktop
 
 Create a VirtualBox VM with a 20GB disk. Boot off the archlinux ISO.
 
