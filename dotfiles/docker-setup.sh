@@ -9,7 +9,7 @@ git clone git://github.com/zsh-users/zsh-autosuggestions ~/zsh/zsh-autosuggestio
 git clone git://github.com/zsh-users/zsh-completions.git ~/zsh/zsh-completions
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ./setup.sh
-#vim +PlugInstall
+vim +PlugInstall
 #read -p ' - What is your github author name? ' git_authorname
 #read -p ' - What is your github author email? ' git_authoremail
 #sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" .gitconfig.local.example > ~/.gitconfig.local
