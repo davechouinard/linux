@@ -15,7 +15,7 @@ passwd <username>
 exit
 # shutdown, remove ISO, reboot
 # login as <username>
-git clone https://github.com/davechouinard/linux.git ~/src/github.com/davechouinard/linux
-cd ~/src/github.com/davechouinard/linux/dotfiles
+git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
+cd ~/src/github.com/davechouinard/dotfiles
 ./full-setup.sh
 ```
