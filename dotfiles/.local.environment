@@ -30,6 +30,10 @@ alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
 alias eg='vim ~/.gitconfig'
 
+function newbox () {
+  docker run --name $1 --hostname=$1 -it -v /var/run/docker.sock:/var/run/docker.sock devbox
+}
+
 export EDITOR='vim'
 export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
