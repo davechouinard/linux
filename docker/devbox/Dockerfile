@@ -33,8 +33,8 @@ RUN git clone https://github.com/davechouinard/dotfiles.git && \
     cd dotfiles && \
     ./full-setup.sh docker
 
-COPY vim /root/.vim
-COPY tmux /root/.tmux
+COPY .vim /root/.vim
+COPY .tmux /root/.tmux
 COPY gitconfig.local /root/.gitconfig.local
 
 ENTRYPOINT ["/bin/zsh"]
