@@ -1,7 +1,6 @@
 "===============================================================================
 " vim-plug
 "===============================================================================
-"Plug 'vim-airline/vim-airline-themes'
 call plug#begin('~/.vim/plug')
 Plug 'SirVer/ultisnips'
 Plug 'pearofducks/ansible-vim'
