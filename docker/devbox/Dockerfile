@@ -7,6 +7,7 @@ RUN apt-get update && apt-get -y install apt-transport-https curl software-prope
       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
       xenial stable" && apt-get update && \
     apt-get -y install \
+      dnsutils \
       docker-ce \
       git \
       locales \
