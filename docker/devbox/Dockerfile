@@ -6,9 +6,7 @@ RUN apt-get update && apt-get -y install apt-transport-https curl software-prope
     add-apt-repository \
       "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
       xenial stable" && apt-get update && \
-    apt-get clean autoclean && apt-get -y autoremove 
-
-RUN apt-get -y install \
+    apt-get -y install \
       docker-ce \
       git \
       locales \
@@ -20,7 +18,7 @@ RUN apt-get -y install \
       zsh && \
     pip install --upgrade pip && \
     apt-get clean autoclean && apt-get autoremove -y && \
-    rm -rf /var/lib/apt /var/lib/dpkg /var/lib/cache /var/lib/log
+    rm -rf /var/lib/apt /var/lib/dpkg /var/lib/cache /var/lib/log /usr/share/locale/* /usr/share/doc/* /usr/share/man/*
 
 RUN locale-gen en_US.UTF-8 && \
     ln -fs /usr/share/zoneinfo/America/Chicago /etc/localtime
