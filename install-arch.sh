@@ -107,7 +107,7 @@ EOF
   passwd
 
   echo 'if you have special dns domains to search'
-  echo 'add: search_domains="<domain>" to /etc/resolvconf.conf'
+  echo 'add: search_domains="<domain> <domain>" to /etc/resolvconf.conf'
   exit 0
 
 fi
