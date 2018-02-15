@@ -78,7 +78,9 @@ if [[ "$1" == "chroot" ]]; then
 
   pacman -S --noconfirm dnsutils make openssh python python-pip python2 sudo wget \
     compton ctags dmenu feh git i3 i3blocks parcellite screenfetch termite tmux vim zsh \
-    awesome-terminal-fonts terminus-font ttf-dejavu ttf-inconsolata 
+    awesome-terminal-fonts terminus-font ttf-dejavu ttf-inconsolata
+
+  pip install tmuxp
 
   ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
   ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
