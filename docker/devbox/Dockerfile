@@ -1,39 +1,22 @@
-FROM ubuntu:16.04
+FROM ubuntu:17.10
 
-RUN apt-get update && apt-get -y install apt-transport-https curl software-properties-common && \
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - && \
-    apt-get update && \
-    add-apt-repository \
-      "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-      xenial stable" && apt-get update && \
-    apt-get -y install \
-      dnsutils \
-      docker-ce \
-      git \
-      locales \
-      python-pip \
-      sudo \
-      tmux \
-      tzdata \
-      vim \
-      zsh && \
-    pip install --upgrade pip && \
-    apt-get clean autoclean && apt-get autoremove -y && \
-    rm -rf /var/lib/apt /var/lib/dpkg /var/lib/cache /var/lib/log /usr/share/locale/* /usr/share/doc/* /usr/share/man/*
+RUN apt-get update \
+  && apt-get -y install \
+     dnsutils curl git locales python-pip tmux tzdata vim wget zsh apt-transport-https ca-certificates software-properties-common \
+  && ln -fs /usr/share/zoneinfo/America/Chicago /etc/localtime \
+  && pip install tmuxp \
+  && curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add - \
+  && add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+  && apt-get update && apt-get -y install docker-ce \
+  && rm -rf /var/lib/apt/lists/* /usr/share/locale/* /usr/share/doc/* /usr/share/man/* \
+  && curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose \
+  && chmod +x /usr/local/bin/docker-compose \
+  && locale-gen en_US.UTF-8
 
-RUN locale-gen en_US.UTF-8 && \
-    ln -fs /usr/share/zoneinfo/America/Chicago /etc/localtime
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 WORKDIR /root
-RUN git clone https://github.com/davechouinard/dotfiles.git && \
-    cd dotfiles && \
-    ./full-setup.sh docker
 
-COPY .vim /root/.vim
-COPY .tmux /root/.tmux
-COPY gitconfig.local /root/.gitconfig.local
-
-ENTRYPOINT ["/bin/zsh"]
+ENTRYPOINT ["/bin/bash"]
