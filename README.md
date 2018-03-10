@@ -19,3 +19,15 @@ git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davecho
 cd ~/src/github.com/davechouinard/dotfiles
 ./full-setup.sh
 ```
+
+## Ubuntu 16.04 Live CD
+
+Setup wifi
+
+```
+setxkbmap us dvorak
+sudo apt-get update && sudo apt-get -y install git tmux vim zsh
+git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
+cd ~/src/github.com/davechouinard/dotfiles
+./full-setup.sh
+```
