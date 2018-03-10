@@ -26,7 +26,8 @@ Setup wifi
 
 ```
 setxkbmap us dvorak
-sudo apt-get update && sudo apt-get -y install curl git tmux vim zsh
+sudo apt-add-repository "deb http://archive.canonical.com/ubuntu xenial partner"
+sudo apt-get update && sudo apt-get -y install adobe-flashplugin curl git tmux vim zsh
 wget -P ~/Downloads/ https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Inconsolata/complete/Inconsolata%20Nerd%20Font%20Complete.otf
 git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
 cd ~/src/github.com/davechouinard/dotfiles
