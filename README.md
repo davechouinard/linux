@@ -36,6 +36,5 @@ cd ~/src/github.com/davechouinard/dotfiles
 ./full-setup.sh
 cd
 curl -fsSL get.docker.com -o get-docker.sh && sh ./get-docker.sh
-sudo usermod -aG docker ubuntu
 ```
 Select Inconsolata font in terminal
