@@ -14,6 +14,7 @@ sudo visudo
 sudo apt-get update
 sudo apt-get -y install \
   linux-headers-$(uname -r) build-essential dkms \
+  libgconf2-4 \ #(vscode)
   git htop vim-nox tmux tmuxp zsh
 VirtualBox:Device->Insert Guest Additions CD Image...
 cd /media/<user>/VBox...
