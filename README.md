@@ -1,10 +1,14 @@
-# linux
+# virtualbox desktop linux
 
-This repo holds automation for Linux OS installs.
+Basic quick setup instructions for Linux virtual desktops.
+For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
+
+## xubuntu 18.04
+
+```bash
+```
 
 ## Arch Linux Desktop
-
-Create a VirtualBox VM with a 20GB disk. Boot off the archlinux ISO.
 
 ```
 wget https://raw.githubusercontent.com/davechouinard/linux/master/install-arch.sh
@@ -38,3 +42,4 @@ cd
 curl -fsSL get.docker.com -o get-docker.sh && sh ./get-docker.sh
 ```
 Select Inconsolata font in terminal
+
