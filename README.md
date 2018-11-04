@@ -12,7 +12,9 @@ sudo visudo
 
 # Guest Additions and packages
 sudo apt-get update
-sudo apt-get -y install linux-headers-$(uname -r) build-essential dkms git vim-nox htop tmux tmuxp
+sudo apt-get -y install \
+  linux-headers-$(uname -r) build-essential dkms \
+  git htop vim-nox tmux tmuxp zsh
 VirtualBox:Device->Insert Guest Additions CD Image...
 cd /media/<user>/VBox...
 sudo ./VBoxLinuxAdditions.run
