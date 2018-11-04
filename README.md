@@ -6,9 +6,13 @@ For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 ## xubuntu 18.04
 
 ```bash
+# sudo
+sudo visudo
+# %sudo	ALL=(ALL:ALL) NOPASSWD: ALL
+
 # Guest Additions and packages
 sudo apt-get update
-sudo apt-get -y install linux-headers-$(uname -r) build-essential dkms git vim-nox
+sudo apt-get -y install linux-headers-$(uname -r) build-essential dkms git vim-nox htop
 VirtualBox:Device->Insert Guest Additions CD Image...
 cd /media/<user>/VBox...
 sudo ./VBoxLinuxAdditions.run
@@ -37,6 +41,8 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get -y install docker-ce
+usermod -aG docker $USER
+
 ```
 
 ## Arch Linux Desktop
