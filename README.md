@@ -42,7 +42,7 @@ sudo add-apt-repository \
 sudo apt-get update
 sudo apt-get -y install docker-ce
 usermod -aG docker $USER
-
+# logout
 ```
 
 ## Arch Linux Desktop
