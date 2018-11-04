@@ -6,6 +6,37 @@ For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 ## xubuntu 18.04
 
 ```bash
+# Guest Additions and packages
+sudo apt-get update
+sudo apt-get -y install linux-headers-$(uname -r) build-essential dkms git vim-nox
+VirtualBox:Device->Insert Guest Additions CD Image...
+cd /media/<user>/VBox...
+sudo ./VBoxLinuxAdditions.run
+sudo reboot
+# Terminal: Preferences->Advanced->Automatically copy selection to clipboard
+
+# Fonts and powerline
+sudo apt-get -y install powerline fonts-powerline fonts-firacode
+
+# Dotfiles
+git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
+cd ~/src/github.com/davechouinard/dotfiles
+./full-setup.sh
+cd
+
+# Docker
+sudo apt-get -y install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+sudo apt-get update
+sudo apt-get -y install docker-ce
 ```
 
 ## Arch Linux Desktop
