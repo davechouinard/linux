@@ -24,6 +24,10 @@ sudo reboot
 
 # Fonts and powerline
 sudo apt-get -y install powerline fonts-powerline fonts-firacode
+cd /etc/fonts/conf.d
+sudo ln -s ../conf.avail/10-no-sub-pixel.conf
+sudo rm 10-hinting-slight.conf
+sudo ln -s ../conf.avail/10-hinting-full.conf 
 
 # Dotfiles
 git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
