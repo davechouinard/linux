@@ -28,6 +28,7 @@ cd /etc/fonts/conf.d
 sudo ln -s ../conf.avail/10-no-sub-pixel.conf
 sudo rm 10-hinting-slight.conf
 sudo ln -s ../conf.avail/10-hinting-full.conf 
+echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' >> /etc/environment
 
 # Dotfiles
 git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
