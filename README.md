@@ -6,7 +6,7 @@ For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 ## xubuntu 18.04
 
 ```bash
-# sudo
+# sudo - no password
 sudo visudo
 # %sudo	ALL=(ALL:ALL) NOPASSWD: ALL
 
@@ -50,6 +50,21 @@ sudo apt-get update
 sudo apt-get -y install docker-ce
 usermod -aG docker $USER
 # logout
+
+# Terminal theme - Dracula
+cat << EOF > /usr/share/xfce4/terminal/colorschemes/dracula.theme
+[Scheme]
+Name=Dracula
+ColorBackground=#28282a2a3636
+ColorForeground=#f8f8f8f8f2f2
+ColorSelection=#363639394848
+ColorBold=#f4f47676c3c3
+ColorCursor=#5050fafa7b7b
+TabActivityColor=#5050fafa7b7b
+ColorPalette=#000000000000;#9a9a40404646;#90907979b3b3;#929298986363;#3d3d98985a5a;#9a9a53538282;#3a3a4d4d5b5b;#8bfc8bfc8ccc;#4d4d4d4d4d4d;#ffff55555555;#cacaa9a9fafa;#f1f1fafa8c8c;#5050fafa7b7b;#ffff7979c6c6;#8b8be9e9fdfd;#f8f8f8f8f2f2
+ColorSelectionUseDefault=FALSE
+ColorBoldUseDefault=FALSE
+EOF
 ```
 
 ## Arch Linux Desktop
