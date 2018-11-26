@@ -32,7 +32,7 @@ echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening
 # Dotfiles
 git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
 cd ~/src/github.com/davechouinard/dotfiles
-./full-setup.sh
+./setup.sh
 cd
 
 # Docker
@@ -80,5 +80,5 @@ exit
 # login as <username>
 git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
 cd ~/src/github.com/davechouinard/dotfiles
-./full-setup.sh
+./setup.sh
 ```
