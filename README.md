@@ -48,7 +48,7 @@ sudo add-apt-repository \
    stable"
 sudo apt-get update
 sudo apt-get -y install docker-ce
-usermod -aG docker $USER
+sudo usermod -aG docker $USER
 # logout
 
 # Terminal theme - Dracula
