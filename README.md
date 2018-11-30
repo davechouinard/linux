@@ -12,7 +12,7 @@ sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
 # Guest Additions and packages
 sudo apt-get update
 sudo apt-get -y install \
-  linux-headers-$(uname -r) build-essential dkms \
+  linux-headers-$(uname -r) build-essential dkms \ #(guest additions)
   libgconf2-4 pylint \ #(vscode)
   git htop vim-nox tmux tmuxp zsh
 # VirtualBox: Device->Insert Guest Additions CD Image...
