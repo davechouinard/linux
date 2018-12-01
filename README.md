@@ -11,14 +11,18 @@ sudo sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
 
 # Guest Additions and packages
 sudo apt-get update
+
+# install pre-reqs for guest additions, then vscode, then misc utils
 sudo apt-get -y install \
-  linux-headers-$(uname -r) build-essential dkms #(guest additions)\
-  libgconf2-4 pylint #(vscode)\
+  linux-headers-$(uname -r) build-essential dkms \
+  libgconf2-4 pylint \
   git htop vim-nox tmux tmuxp zsh
+
 # VirtualBox: Device->Insert Guest Additions CD Image...
 cd /media/<user>/VBox...
 sudo ./VBoxLinuxAdditions.run
 sudo reboot
+
 # Terminal: Preferences->Advanced->Automatically copy selection to clipboard
 
 # Fonts and powerline
