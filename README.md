@@ -7,7 +7,7 @@ For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 
 ```bash
 # sudo - no password
-sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
+sudo sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
 
 # Guest Additions and packages
 sudo apt-get update
