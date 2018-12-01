@@ -42,7 +42,7 @@ EOF
 
 echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' >> /etc/environment
 exit
-```
+
 # Fonts and powerline
 sudo apt-get -y install powerline fonts-powerline fonts-firacode
 cd /etc/fonts/conf.d
@@ -71,6 +71,7 @@ sudo apt-get update
 sudo apt-get -y install docker-ce
 sudo usermod -aG docker $USER
 # reboot
+```
 
 ## Arch Linux Desktop
 
