@@ -15,7 +15,7 @@ sudo apt-get update
 # install pre-reqs for guest additions, then vscode, then misc utils
 sudo apt-get -y install \
   linux-headers-$(uname -r) build-essential dkms \
-  libgconf2-4 pylint \
+  libgconf2-4 \
   git htop vim-nox tmux tmuxp zsh
 
 # VirtualBox: Device->Insert Guest Additions CD Image...
