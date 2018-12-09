@@ -44,7 +44,8 @@ echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening
 exit
 
 # Fonts and powerline
-sudo apt-get -y install powerline fonts-powerline fonts-firacode
+pip install powerline-status
+sudo apt-get -y install fonts-powerline fonts-firacode
 cd /etc/fonts/conf.d
 sudo ln -s ../conf.avail/10-no-sub-pixel.conf
 sudo rm 10-hinting-slight.conf
