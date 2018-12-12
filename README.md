@@ -16,7 +16,7 @@ sudo apt-get update
 sudo apt-get -y install \
   linux-headers-$(uname -r) build-essential dkms \
   libgconf2-4 \
-  git htop python-pip vim-nox tmux tmuxp zsh
+  git htop python-pip screenfetch tmux tmuxp vim-nox zsh
 
 # VirtualBox: Device->Insert Guest Additions CD Image...
 cd /media/<user>/VBox...
