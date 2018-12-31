@@ -33,6 +33,7 @@ cd /etc/fonts/conf.d
 ln -s ../conf.avail/10-no-sub-pixel.conf
 rm 10-hinting-slight.conf
 ln -s ../conf.avail/10-hinting-full.conf 
+cd
 
 # Docker
 apt-get -y install \
