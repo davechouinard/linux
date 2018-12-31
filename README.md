@@ -12,16 +12,11 @@ sudo sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
 # Guest Additions and packages
 sudo apt-get update
 
-# ansible
-sudo apt-get install software-properties-common
-sudo apt-add-repository --yes --update ppa:ansible/ansible
-sudo apt-get install ansible
-
-# install pre-reqs for guest additions, then vscode, then misc utils
+# install pre-reqs for guest additions, vscode, misc utils
 sudo apt-get -y install \
   linux-headers-$(uname -r) build-essential dkms \
   libgconf2-4 \
-  git htop python-pip screenfetch tmux tmuxp vim-nox zsh
+  fonts-powerline fonts-firacode git htop python-pip screenfetch tmux tmuxp vim-nox zsh
 
 # VirtualBox: Device->Insert Guest Additions CD Image...
 cd /media/<user>/VBox...
@@ -48,9 +43,10 @@ EOF
 echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' >> /etc/environment
 exit
 
-# Fonts and powerline
-pip install powerline-status
-sudo apt-get -y install fonts-powerline fonts-firacode
+# ansible and powerline
+pip install --user powerline-status ansible molecule docker
+
+# font setup
 cd /etc/fonts/conf.d
 sudo ln -s ../conf.avail/10-no-sub-pixel.conf
 sudo rm 10-hinting-slight.conf
