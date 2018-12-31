@@ -28,6 +28,8 @@ cd ~/src/github.com/davechouinard/dotfiles
 ./setup.sh
 cd
 
+sudo usermod -aG docker $USER
+ 
 # reboot
 ```
 
