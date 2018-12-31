@@ -6,7 +6,7 @@ sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
 # Guest Additions and packages
 apt-get update
 
-# install pre-reqs for guest additions, vscode, misc utils
+# Install pre-reqs for guest additions, vscode, misc utils
 apt-get -y install \
   linux-headers-$(uname -r) build-essential dkms \
   libgconf2-4 \
@@ -28,7 +28,7 @@ ColorBoldUseDefault=FALSE
 EOF
 echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' >> /etc/environment
 
-# font setup
+# Font setup
 cd /etc/fonts/conf.d
 ln -s ../conf.avail/10-no-sub-pixel.conf
 rm 10-hinting-slight.conf
