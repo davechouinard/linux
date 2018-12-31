@@ -3,7 +3,7 @@
 Basic quick setup instructions for Linux virtual desktops.
 For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 
-## xubuntu 18.04
+## Xubuntu
 
 ```bash
 curl https://raw.githubusercontent.com/davechouinard/linux/master/xubuntu.sh | sudo bash
@@ -31,7 +31,7 @@ cd
 # reboot
 ```
 
-## Arch Linux Desktop
+## Arch
 
 ```
 wget https://raw.githubusercontent.com/davechouinard/linux/master/install-arch.sh
