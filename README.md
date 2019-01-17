@@ -6,7 +6,7 @@ For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 ## Xubuntu
 
 ```bash
-curl https://raw.githubusercontent.com/davechouinard/linux/master/xubuntu.sh | sudo bash
+curl https://raw.githubusercontent.com/txdavec/linux/master/xubuntu.sh | sudo bash
 
 # VirtualBox: Device->Insert Guest Additions CD Image...
 cd /media/<user>/VBox...
@@ -23,8 +23,8 @@ Advanced->Automatically copy selection to clipboard
 pip install --user powerline-status ansible molecule docker
 
 # Dotfiles
-git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
-cd ~/src/github.com/davechouinard/dotfiles
+git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
+cd ~/src/github.com/txdavec/dotfiles
 ./setup.sh
 cd
 
@@ -36,7 +36,7 @@ sudo usermod -aG docker $USER
 ## Arch
 
 ```
-wget https://raw.githubusercontent.com/davechouinard/linux/master/install-arch.sh
+wget https://raw.githubusercontent.com/txdavec/linux/master/install-arch.sh
 sh ./install-arch.sh base
 sh ./install-arch.sh chroot
 useradd -m -G wheel,docker -s /bin/bash <username>
@@ -44,7 +44,7 @@ passwd <username>
 exit
 # shutdown, remove ISO, reboot
 # login as <username>
-git clone https://github.com/davechouinard/dotfiles.git ~/src/github.com/davechouinard/dotfiles
-cd ~/src/github.com/davechouinard/dotfiles
+git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
+cd ~/src/github.com/txdavec/dotfiles
 ./setup.sh
 ```
