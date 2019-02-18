@@ -19,8 +19,8 @@ General->Scrollbar disabled
 Colors->Load Presets...->Dracula
 Advanced->Automatically copy selection to clipboard
 
-# Ansible and Powerline
-pip install --user powerline-status ansible molecule docker
+# Local user install - Ansible
+pip install --user ansible molecule docker
 
 # Dotfiles
 git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
