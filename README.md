@@ -16,7 +16,6 @@ sudo reboot
 # Terminal Preferences: 
 General->Unlimited scrollback
 General->Scrollbar disabled
-Colors->Load Presets...->Dracula
 Advanced->Automatically copy selection to clipboard
 
 # Local user install - Ansible
