@@ -27,6 +27,10 @@ cd ~/src/github.com/txdavec/dotfiles
 ./setup.sh
 cd
 
+# Local terminal font
+wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20Nerd%20Font%20Complete.ttf
+
+# Local user into docker group
 sudo usermod -aG docker $USER
  
 # reboot
