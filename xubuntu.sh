@@ -26,6 +26,19 @@ ColorPalette=#000000000000;#9a9a40404646;#90907979b3b3;#929298986363;#3d3d98985a
 ColorSelectionUseDefault=FALSE
 ColorBoldUseDefault=FALSE
 EOF
+cat << EOF > /usr/share/xfce4/terminal/colorschemes/onedark.theme
+[Scheme]
+Name=One Dark
+ColorForeground=#ABB2BF
+ColorCursor=#ABB2BF
+ColorBackground=#282C34
+ColorSelection=#3B4451
+ColorSelectionUseDefault=FALSE
+ColorBold=#B9C0CB
+ColorBoldUseDefault=FALSE
+ColorPalette=#282C34;#E06C75;#98C379;#E5C07B;#61AFEF;#C678DD;#56B6C2;#ABB2BF;#3E4452;#BE5046;#98C379;#D19A66;#61AFEF;#C678DD;#56B6C2;#5C6370
+EOF
+
 echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' >> /etc/environment
 
 # Font setup
