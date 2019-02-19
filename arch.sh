@@ -91,7 +91,7 @@ if [[ "$1" == "chroot" ]]; then
   mkdir /etc/docker
   cat << EOF > /etc/docker/daemon.json
 {
-  "bip": "192.168.16.1/24"
+  "bip": "192.168.1.1/24"
 }
 EOF
 
