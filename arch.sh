@@ -86,15 +86,6 @@ if [[ "$1" == "chroot" ]]; then
   ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
 
   echo 'installing docker'
-  curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
-  chmod +x /usr/local/bin/docker-compose
-  mkdir /etc/docker
-  cat << EOF > /etc/docker/daemon.json
-{
-  "bip": "192.168.1.1/24"
-}
-EOF
-
   tee /etc/modules-load.d/loop.conf <<< "loop"
   modprobe loop 
   pacman -S --noconfirm docker
