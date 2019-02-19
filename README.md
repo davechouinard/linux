@@ -39,9 +39,9 @@ sudo usermod -aG docker $USER
 ## Arch
 
 ```
-wget https://raw.githubusercontent.com/txdavec/linux/master/install-arch.sh
-sh ./install-arch.sh base
-sh ./install-arch.sh chroot
+wget https://raw.githubusercontent.com/txdavec/linux/master/arch.sh
+sh ./arch.sh base
+sh ./arch.sh chroot
 useradd -m -G wheel,docker -s /bin/bash <username>
 passwd <username>
 exit
