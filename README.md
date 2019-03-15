@@ -13,6 +13,9 @@ cd /media/<user>/VBox...
 sudo ./VBoxLinuxAdditions.run
 sudo reboot
 
+wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
+# install font
+
 # Terminal Preferences: 
 General->Unlimited scrollback
 General->Scrollbar disabled
@@ -26,9 +29,6 @@ git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfi
 cd ~/src/github.com/txdavec/dotfiles
 ./setup.sh
 cd
-
-# Local patched terminal font - vscode
-https://github.com/powerline/fonts/tree/master/DejaVuSansMono
 
 # Local user into docker group
 sudo usermod -aG docker $USER
