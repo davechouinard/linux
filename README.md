@@ -28,7 +28,7 @@ cd ~/src/github.com/txdavec/dotfiles
 cd
 
 # Local patched terminal font - vscode
-wget https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/UbuntuMono/Regular/complete/Ubuntu%20Mono%20Nerd%20Font%20Complete.ttf
+https://github.com/powerline/fonts/tree/master/DejaVuSansMono
 
 # Local user into docker group
 sudo usermod -aG docker $USER
