@@ -11,12 +11,22 @@ VirtualBox: Device->Insert Guest Additions CD Image...
 
 ```bash
 wget -O - https://raw.githubusercontent.com/txdavec/linux/master/xubuntu.sh | sudo bash
-
-# Terminal Preferences: 
-General->Unlimited scrollback
-General->Scrollbar disabled
-Advanced->Automatically copy selection to clipboard
 ```
+
+### Terminal Preferences: 
+- DejaVu Sans Mono powerline font
+- General->Unlimited scrollback
+- General->Scrollbar disabled
+- Advanced->Automatically copy selection to clipboard
+
+### Install VSCode
+Extensions:
+- Jinja
+- language-Ansible
+- One Dark Pro
+- Vim
+- vscode-icons
+
 
 ## Arch
 
