@@ -39,7 +39,10 @@ ColorBoldUseDefault=FALSE
 ColorPalette=#282C34;#E06C75;#98C379;#E5C07B;#61AFEF;#C678DD;#56B6C2;#ABB2BF;#3E4452;#BE5046;#98C379;#D19A66;#61AFEF;#C678DD;#56B6C2;#5C6370
 EOF
 
-echo 'FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"' >> /etc/environment
+cat << EOF > /etc/environment
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1"
+EOF
 
 # Font setup
 cd /etc/fonts/conf.d
@@ -64,14 +67,13 @@ apt-get -y install docker-ce
 
 # setup script to be run by non-root user
 cat << EOF > ./setup.sh
-wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
 pip install --user ansible molecule docker
 sudo usermod -aG docker $SUDO_UID
 
 git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
 cd ~/src/github.com/txdavec/dotfiles
 ./setup.sh
-cd /media/$USER/VBox_GAs_*/
+cd /media/$SUDO_UID/VBox_GAs_*/
 sudo ./VBoxLinuxAdditions.run
 EOF
 chmod +x ./setup.sh
