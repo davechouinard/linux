@@ -5,6 +5,10 @@ For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 
 ## Xubuntu
 
+Insert guest additions CD:
+
+VirtualBox: Device->Insert Guest Additions CD Image...
+
 ```bash
 wget -O - https://raw.githubusercontent.com/txdavec/linux/master/xubuntu.sh | sudo bash
 
