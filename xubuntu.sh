@@ -12,7 +12,7 @@ apt-get -y install \
   libgconf2-4 \
   fonts-powerline fonts-firacode git htop python-pip tmux tmuxp vim-nox zsh
 
-# Terminal theme - Dracula, font properties
+# Terminal themes, font properties
 cat << EOF > /usr/share/xfce4/terminal/colorschemes/dracula.theme
 [Scheme]
 Name=Dracula
@@ -26,6 +26,7 @@ ColorPalette=#000000000000;#9a9a40404646;#90907979b3b3;#929298986363;#3d3d98985a
 ColorSelectionUseDefault=FALSE
 ColorBoldUseDefault=FALSE
 EOF
+
 cat << EOF > /usr/share/xfce4/terminal/colorschemes/onedark.theme
 [Scheme]
 Name=One Dark
@@ -64,23 +65,17 @@ add-apt-repository \
    stable"
 apt-get update
 apt-get -y install docker-ce
+usermod -aG docker $SUDO_USER
 
-# setup script to be run by non-root user
-cat << EOF > ./setup.sh
-pip install --user ansible molecule docker
-sudo usermod -aG docker $SUDO_USER
+pip install ansible molecule docker
+git clone https://github.com/txdavec/dotfiles.git /home/$SUDO_USER/src/github.com/txdavec/dotfiles
+cd /home/$SUDO_USER/src/github.com/txdavec/dotfiles
+su $SUDO_USER -c ./setup.sh
 
-git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
-cd ~/src/github.com/txdavec/dotfiles
-./setup.sh
 cd /media/$SUDO_USER/VBox_GAs_*/
 sudo ./VBoxLinuxAdditions.run
-EOF
-chmod +x ./setup.sh
-
+cd
 echo
-echo "now run the following script and reboot when finished:"
-echo "$(pwd)/setup.sh"
-echo
+echo 'setup script finished, please reboot...'
 
 exit 0
