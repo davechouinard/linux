@@ -66,7 +66,7 @@ apt-get -y install docker-ce
 cat << EOF > ./setup.sh
 wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
 pip install --user ansible molecule docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker $SUDO_UID
 
 git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
 cd ~/src/github.com/txdavec/dotfiles
