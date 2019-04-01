@@ -76,6 +76,7 @@ usermod -aG docker $SUDO_USER
 
 su $SUDO_USER -c "pip install --user ansible molecule docker"
 git clone https://github.com/txdavec/dotfiles.git /home/$SUDO_USER/src/github.com/txdavec/dotfiles
+chown -R $SUDO_USER /home/$SUDO_USER/src
 cd /home/$SUDO_USER/src/github.com/txdavec/dotfiles
 su $SUDO_USER -c ./setup.sh
 
