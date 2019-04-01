@@ -69,6 +69,7 @@ wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%
 
 # guest additions
 echo
+echo "VirtualBox: Device->Insert Guest Additions CD Image..."
 echo "cd /media/<user>/VBox..."
 echo "sudo ./VBoxLinuxAdditions.run"
 echo "sudo reboot"
