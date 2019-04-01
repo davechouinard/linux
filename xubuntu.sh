@@ -62,4 +62,32 @@ add-apt-repository \
 apt-get update
 apt-get -y install docker-ce
 
+# terminal font
+echo
+echo "install terminal font in $(pwd)"
+wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
+
+# guest additions
+echo
+echo "cd /media/<user>/VBox..."
+echo "sudo ./VBoxLinuxAdditions.run"
+echo "sudo reboot"
+
+# Local user install - Ansible
+echo
+echo "pip install --user ansible molecule docker"
+
+# Dotfiles
+echo
+echo "git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles"
+echo "cd ~/src/github.com/txdavec/dotfiles"
+echo "./setup.sh"
+
+# Local user into docker group
+echo
+echo "sudo usermod -aG docker $USER"
+ 
+echo
+echo reboot
+
 exit 0
