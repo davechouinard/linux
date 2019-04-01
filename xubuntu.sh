@@ -67,7 +67,7 @@ apt-get update
 apt-get -y install docker-ce
 usermod -aG docker $SUDO_USER
 
-pip install ansible molecule docker
+su $SUDO_USER -c "pip install --user ansible molecule docker"
 git clone https://github.com/txdavec/dotfiles.git /home/$SUDO_USER/src/github.com/txdavec/dotfiles
 cd /home/$SUDO_USER/src/github.com/txdavec/dotfiles
 su $SUDO_USER -c ./setup.sh
