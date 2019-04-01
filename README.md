@@ -8,32 +8,10 @@ For all distros, create a VirtualBox VM with a 20GB disk. Boot off the ISO.
 ```bash
 wget -O - https://raw.githubusercontent.com/txdavec/linux/master/xubuntu.sh | sudo bash
 
-# VirtualBox: Device->Insert Guest Additions CD Image...
-cd /media/<user>/VBox...
-sudo ./VBoxLinuxAdditions.run
-sudo reboot
-
-wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
-# install font
-
 # Terminal Preferences: 
 General->Unlimited scrollback
 General->Scrollbar disabled
 Advanced->Automatically copy selection to clipboard
-
-# Local user install - Ansible
-pip install --user ansible molecule docker
-
-# Dotfiles
-git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
-cd ~/src/github.com/txdavec/dotfiles
-./setup.sh
-cd
-
-# Local user into docker group
-sudo usermod -aG docker $USER
- 
-# reboot
 ```
 
 ## Arch
