@@ -53,6 +53,13 @@ ln -s ../conf.avail/10-hinting-full.conf
 cd
 
 # Docker
+mkdir -p /etc/docker
+cat << EOF > /etc/docker/daemon.json
+{
+  "bip": "192.168.2.1/24"
+}
+EOF
+
 apt-get -y install \
     apt-transport-https \
     ca-certificates \
