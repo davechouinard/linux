@@ -68,12 +68,12 @@ apt-get -y install docker-ce
 # setup script to be run by non-root user
 cat << EOF > ./setup.sh
 pip install --user ansible molecule docker
-sudo usermod -aG docker $SUDO_UID
+sudo usermod -aG docker $SUDO_USER
 
 git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
 cd ~/src/github.com/txdavec/dotfiles
 ./setup.sh
-cd /media/$SUDO_UID/VBox_GAs_*/
+cd /media/$SUDO_USER/VBox_GAs_*/
 sudo ./VBoxLinuxAdditions.run
 EOF
 chmod +x ./setup.sh
