@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# insert guest additions
+echo
+echo "Before we get started..."
+echo "VirtualBox: Device->Insert Guest Additions CD Image..."
+echo "Press any key when ready"
+read x
+
 # sudo - no password
 sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
 
@@ -62,33 +69,23 @@ add-apt-repository \
 apt-get update
 apt-get -y install docker-ce
 
-# terminal font
-echo
-echo "install terminal font in $(pwd)"
+# setup script to be run by non-root user
+cat << EOF > ./setup.sh
 wget https://github.com/powerline/fonts/raw/master/DejaVuSansMono/DejaVu%20Sans%20Mono%20for%20Powerline.ttf
+pip install --user ansible molecule docker
+sudo usermod -aG docker $USER
 
-# guest additions
-echo
-echo "VirtualBox: Device->Insert Guest Additions CD Image..."
-echo "cd /media/<user>/VBox..."
-echo "sudo ./VBoxLinuxAdditions.run"
-echo "sudo reboot"
+git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles
+cd ~/src/github.com/txdavec/dotfiles
+./setup.sh
+cd /media/$USER/VBox_GAs_*/
+sudo ./VBoxLinuxAdditions.run
+EOF
+chmod +x ./setup.sh
 
-# Local user install - Ansible
 echo
-echo "pip install --user ansible molecule docker"
-
-# Dotfiles
+echo "now run the following script and reboot when finished:"
+echo "$(pwd)/setup.sh"
 echo
-echo "git clone https://github.com/txdavec/dotfiles.git ~/src/github.com/txdavec/dotfiles"
-echo "cd ~/src/github.com/txdavec/dotfiles"
-echo "./setup.sh"
-
-# Local user into docker group
-echo
-echo "sudo usermod -aG docker $USER"
- 
-echo
-echo reboot
 
 exit 0
