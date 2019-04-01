@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# insert guest additions
-echo
-echo "Before we get started..."
-echo "VirtualBox: Device->Insert Guest Additions CD Image..."
-echo "Press any key when ready"
-read x
-
 # sudo - no password
 sed -i '/^%sudo/c\%sudo ALL=(ALL:ALL) NOPASSWD: ALL' /etc/sudoers
 
