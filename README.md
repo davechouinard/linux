@@ -21,6 +21,7 @@ wget -O - https://raw.githubusercontent.com/txdavec/linux/master/xubuntu.sh | su
 
 ### Install VSCode
 Extensions:
+- Code Spell Checker
 - Jinja
 - language-Ansible
 - One Dark Pro
