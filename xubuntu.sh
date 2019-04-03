@@ -10,7 +10,7 @@ apt-get update
 apt-get -y install \
   linux-headers-$(uname -r) build-essential dkms \
   libgconf2-4 \
-  fonts-powerline fonts-firacode git htop python-pip tmux tmuxp vim-nox zsh
+  flashplugin-installer fonts-powerline fonts-firacode git htop python-pip tmux tmuxp vim-nox zsh
 
 # Terminal themes, font properties
 cat << EOF > /usr/share/xfce4/terminal/colorschemes/dracula.theme
