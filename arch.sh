@@ -1,6 +1,11 @@
 #!/bin/bash
-# arch linux install script, run the base setup with 'base' option
-# then run the chroot setup with 'chroot' option
+# Arch Linux install script
+# Usage:
+# sh ./arch.sh base
+# sh ./arch.sh chroot
+# useradd -m -G wheel,docker -s /bin/bash <username>
+# passwd <username>
+# exit
 
 if [[ "$1" == "base" ]]; then
 
