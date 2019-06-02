@@ -1,4 +1,4 @@
-## VNC Setup
+# VNC Setup
 
 ```
 # as root
