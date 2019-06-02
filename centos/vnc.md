@@ -20,4 +20,6 @@ unset DBUS_SESSION_BUS_ADDRESS
 openbox
 vncserver -kill $DISPLAY
 EOF
+
+vncserver
 ```
