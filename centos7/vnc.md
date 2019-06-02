@@ -10,7 +10,6 @@ yum -y install tigervnc-server
 # as user
 vncpasswd
 vncserver
-vncserver -kill :1
 cat << "EOF" > .vnc/xstartup
 #!/bin/sh
 
